@@ -1,0 +1,42 @@
+slug: from-neural-fluctuations-to-perceptual-choice
+web_slug: from-neural-fluctuations-to-perceptual-choice
+title: 'From Neural Fluctuations to Perceptual Choice: A Fluctuation–Response Test of Evidence Accumulation'
+header: From Neural Fluctuations to Perceptual Choice
+created: 2026-10
+date: October 2026
+paper_dir: paper
+has_simulation: true
+claims_target: claim-ledger
+repo: git@github.com:piatra-institute/papers-from-neural-fluctuations-to-perceptual-choice.git
+github: https://github.com/piatra-institute/papers-from-neural-fluctuations-to-perceptual-choice
+status: published
+abstract: In models of choice, temperature is usually a parameter fitted to the choices it is meant to
+  explain. For a decision variable that accumulates evidence to a bound, a quantity with the role of a
+  temperature can be measured instead. The probability of a choice is a logistic function of the evidence
+  $h$ divided by $D/(MB)$, where $D$ is the diffusion of the decision variable, $M$ its mobility (the
+  change of drift per unit of evidence) and $B$ the bound, so the psychometric slope is $MB/D$. The ratio
+  is unchanged by any affine change of the decoded coordinate and by the time unit, so a decoder in arbitrary
+  units can be compared with behaviour. We give the exact factors by which leak, instability, trial-to-trial
+  drift variability and start-point bias change the slope; leak can at most double it. For any stationary
+  linear system, the fluctuation-response ratio along the Fisher discriminant of the stationary response
+  is constant at every lag whether or not the system is at equilibrium, so its constancy along a trained
+  decoder tests nothing. We estimate $D$ and $M$ from all trials through optional stopping and split-half
+  cross moments, and test the estimators on a simulated population of 200 Poisson neurons carrying a bounded
+  accumulator. One-bin increment variances predict a slope of 1.40 against a fitted 10.02, and variograms
+  of undecided trials predict 12.29, while the stopped split-half estimators predict 9.89. Under leak,
+  instability and drift variability the mean log ratio of fitted to predicted slope stays between -0.044
+  and 0.051; urgency and a slow signal along the coding axis that does not drive the choice raise it to
+  0.108 and 0.097. With 8,000 trials the run-to-run SD of the log ratio is 0.080; an equivalence test
+  with a ±25% margin reaches a power of 0.8 at about 8,700 trials, and a ±10% margin needs about 48,000.
+build_resources:
+- simulation/output/figures/relation.png
+- simulation/output/figures/readouts.png
+- simulation/output/figures/estimators.png
+- simulation/output/figures/scenarios.png
+- simulation/output/figures/power.png
+web_blurb: For a decision variable that accumulates evidence to a bound, the psychometric slope equals
+  mobility times bound over diffusion, a ratio that survives any affine rescaling of a neural decoder.
+  Optional-stopping estimators recover diffusion and mobility from spiking populations without choices
+  and predict the slope fitted to choices; naive estimators fail by large factors, the prediction tracks
+  behaviour under leak, instability and drift variability, and urgency or a choice-irrelevant signal on
+  the coding axis open gaps of about 10%.

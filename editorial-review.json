@@ -1,0 +1,10 @@
+{
+  "manuscript_sha256": "0a09b4ed7dd927a4222a578c4dfc05d779ea1017b6e17638d294a030d562a248",
+  "full_read": true,
+  "argument_review": true,
+  "structure_review": true,
+  "voice_review": true,
+  "source_review": true,
+  "final_read": true,
+  "notes": "Full read of the final manuscript: argument (first-passage relation and its invariances; exact departure factors; the equilibrium fluctuation-response test shown uninformative along a trained decoder; optional-stopping estimators; simulated population with six generating models; sample size; analysis plan), structure (five propositions with proofs, two tables, five figures), voice (no em-dashes, signature words reduced, math set in LaTeX), sources (literature sentences checked against abstracts, the dataset paper against its full text). See editorial.md."
+}

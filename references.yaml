@@ -1,0 +1,1075 @@
+references:
+- id: aguilera2022
+  type: article-journal
+  title: How particular is the physics of the free energy principle?
+  author:
+  - family: Aguilera
+    given: Miguel
+  - family: Millidge
+    given: Beren
+  - family: Tschantz
+    given: Alexander
+  - family: Buckley
+    given: Christopher L.
+  container-title: Physics of Life Reviews
+  volume: '40'
+  page: 24-50
+  DOI: 10.1016/j.plrev.2021.11.001
+  issued:
+    date-parts:
+    - - 2022
+- id: arieli1996
+  type: article-journal
+  title: 'Dynamics of Ongoing Activity: Explanation of the Large Variability in Evoked Cortical Responses'
+  author:
+  - family: Arieli
+    given: Amos
+  - family: Sterkin
+    given: Alexander
+  - family: Grinvald
+    given: Amiram
+  - family: Aertsen
+    given: Ad
+  container-title: Science
+  volume: '273'
+  issue: '5283'
+  page: 1868-1871
+  DOI: 10.1126/science.273.5283.1868
+  issued:
+    date-parts:
+    - - 1996
+- id: baiesi2009
+  type: article-journal
+  title: Fluctuations and Response of Nonequilibrium States
+  author:
+  - family: Baiesi
+    given: Marco
+  - family: Maes
+    given: Christian
+  - family: Wynants
+    given: Bram
+  container-title: Physical Review Letters
+  volume: '103'
+  issue: '1'
+  DOI: 10.1103/physrevlett.103.010602
+  issued:
+    date-parts:
+    - - 2009
+- id: bogacz2006
+  type: article-journal
+  title: 'The physics of optimal decision making: A formal analysis of models of performance in two-alternative
+    forced-choice tasks.'
+  author:
+  - family: Bogacz
+    given: Rafal
+  - family: Brown
+    given: Eric
+  - family: Moehlis
+    given: Jeff
+  - family: Holmes
+    given: Philip
+  - family: Cohen
+    given: Jonathan D.
+  container-title: Psychological Review
+  volume: '113'
+  issue: '4'
+  page: 700-765
+  DOI: 10.1037/0033-295x.113.4.700
+  issued:
+    date-parts:
+    - - 2006
+- id: brunton2013
+  type: article-journal
+  title: Rats and Humans Can Optimally Accumulate Evidence for Decision-Making
+  author:
+  - family: Brunton
+    given: Bingni W.
+  - family: Botvinick
+    given: Matthew M.
+  - family: Brody
+    given: Carlos D.
+  container-title: Science
+  volume: '340'
+  issue: '6128'
+  page: 95-98
+  DOI: 10.1126/science.1233912
+  issued:
+    date-parts:
+    - - 2013
+- id: callen1951
+  type: article-journal
+  title: Irreversibility and Generalized Noise
+  author:
+  - family: Callen
+    given: Herbert B.
+  - family: Welton
+    given: Theodore A.
+  container-title: Physical Review
+  volume: '83'
+  issue: '1'
+  page: 34-40
+  DOI: 10.1103/physrev.83.34
+  issued:
+    date-parts:
+    - - 1951
+- id: churchland2008
+  type: article-journal
+  title: Decision-making with multiple alternatives
+  author:
+  - family: Churchland
+    given: Anne K
+  - family: Kiani
+    given: Roozbeh
+  - family: Shadlen
+    given: Michael N
+  container-title: Nature Neuroscience
+  volume: '11'
+  issue: '6'
+  page: 693-702
+  DOI: 10.1038/nn.2123
+  issued:
+    date-parts:
+    - - 2008
+- id: churchland2010
+  type: article-journal
+  title: 'Stimulus onset quenches neural variability: a widespread cortical phenomenon'
+  author:
+  - family: Churchland
+    given: Mark M
+  - family: Yu
+    given: Byron M
+  - family: Cunningham
+    given: John P
+  - family: Sugrue
+    given: Leo P
+  - family: Cohen
+    given: Marlene R
+  - family: Corrado
+    given: Greg S
+  - family: Newsome
+    given: William T
+  - family: Clark
+    given: Andrew M
+  - family: Hosseini
+    given: Paymon
+  - family: Scott
+    given: Benjamin B
+  - family: Bradley
+    given: David C
+  - family: Smith
+    given: Matthew A
+  - family: Kohn
+    given: Adam
+  - family: Movshon
+    given: J Anthony
+  - family: Armstrong
+    given: Katherine M
+  - family: Moore
+    given: Tirin
+  - family: Chang
+    given: Steve W
+  - family: Snyder
+    given: Lawrence H
+  - family: Lisberger
+    given: Stephen G
+  - family: Priebe
+    given: Nicholas J
+  - family: Finn
+    given: Ian M
+  - family: Ferster
+    given: David
+  - family: Ryu
+    given: Stephen I
+  - family: Santhanam
+    given: Gopal
+  - family: Sahani
+    given: Maneesh
+  - family: Shenoy
+    given: Krishna V
+  container-title: Nature Neuroscience
+  volume: '13'
+  issue: '3'
+  page: 369-378
+  DOI: 10.1038/nn.2501
+  issued:
+    date-parts:
+    - - 2010
+- id: churchland2011
+  type: article-journal
+  title: Variance as a Signature of Neural Computations during Decision Making
+  author:
+  - family: Churchland
+    given: Anne. K.
+  - family: Kiani
+    given: R.
+  - family: Chaudhuri
+    given: R.
+  - family: Wang
+    given: Xiao-Jing
+  - family: Pouget
+    given: Alexandre
+  - family: Shadlen
+    given: M.N.
+  container-title: Neuron
+  volume: '69'
+  issue: '4'
+  page: 818-831
+  DOI: 10.1016/j.neuron.2010.12.037
+  issued:
+    date-parts:
+    - - 2011
+- id: cisek2009
+  type: article-journal
+  title: 'Decisions in Changing Conditions: The Urgency-Gating Model'
+  author:
+  - family: Cisek
+    given: Paul
+  - family: Puskas
+    given: Geneviève Aude
+  - family: El-Murr
+    given: Stephany
+  container-title: The Journal of Neuroscience
+  volume: '29'
+  issue: '37'
+  page: 11560-11571
+  DOI: 10.1523/jneurosci.1844-09.2009
+  issued:
+    date-parts:
+    - - 2009
+- id: cugliandolo1997
+  type: article-journal
+  title: Energy flow, partial equilibration, and effective temperatures in systems with slow dynamics
+  author:
+  - family: Cugliandolo
+    given: Leticia F.
+  - family: Kurchan
+    given: Jorge
+  - family: Peliti
+    given: Luca
+  container-title: Physical Review E
+  volume: '55'
+  issue: '4'
+  page: 3898-3914
+  DOI: 10.1103/physreve.55.3898
+  issued:
+    date-parts:
+    - - 1997
+- id: cugliandolo2011
+  type: article-journal
+  title: The effective temperature
+  author:
+  - family: Cugliandolo
+    given: Leticia F
+  container-title: 'Journal of Physics A: Mathematical and Theoretical'
+  volume: '44'
+  issue: '48'
+  page: '483001'
+  DOI: 10.1088/1751-8113/44/48/483001
+  issued:
+    date-parts:
+    - - 2011
+- id: daw2006
+  type: article-journal
+  title: Cortical substrates for exploratory decisions in humans
+  author:
+  - family: Daw
+    given: Nathaniel D.
+  - family: O'Doherty
+    given: John P.
+  - family: Dayan
+    given: Peter
+  - family: Seymour
+    given: Ben
+  - family: Dolan
+    given: Raymond J.
+  container-title: Nature
+  volume: '441'
+  issue: '7095'
+  page: 876-879
+  DOI: 10.1038/nature04766
+  issued:
+    date-parts:
+    - - 2006
+- id: ditterich2006
+  type: article-journal
+  title: 'Stochastic models of decisions about motion direction: Behavior and physiology'
+  author:
+  - family: Ditterich
+    given: Jochen
+  container-title: Neural Networks
+  volume: '19'
+  issue: '8'
+  page: 981-1012
+  DOI: 10.1016/j.neunet.2006.05.042
+  issued:
+    date-parts:
+    - - 2006
+- id: drugowitsch2012
+  type: article-journal
+  title: The Cost of Accumulating Evidence in Perceptual Decision Making
+  author:
+  - family: Drugowitsch
+    given: Jan
+  - family: Moreno-Bote
+    given: Rubén
+  - family: Churchland
+    given: Anne K.
+  - family: Shadlen
+    given: Michael N.
+  - family: Pouget
+    given: Alexandre
+  container-title: The Journal of Neuroscience
+  volume: '32'
+  issue: '11'
+  page: 3612-3628
+  DOI: 10.1523/jneurosci.4010-11.2012
+  issued:
+    date-parts:
+    - - 2012
+- id: efron1993
+  type: book
+  title: An Introduction to the Bootstrap
+  author:
+  - family: Efron
+    given: Bradley
+  - family: Tibshirani
+    given: R.J.
+  publisher: Chapman and Hall
+  DOI: 10.1201/9780429246593
+  issued:
+    date-parts:
+    - - 1993
+- id: einstein1905
+  type: article-journal
+  title: Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten
+    suspendierten Teilchen
+  author:
+  - family: Einstein
+    given: A.
+  container-title: Annalen der Physik
+  volume: '322'
+  issue: '8'
+  page: 549-560
+  DOI: 10.1002/andp.19053220806
+  issued:
+    date-parts:
+    - - 1905
+- id: feldman2010
+  type: article-journal
+  title: Attention, Uncertainty, and Free-Energy
+  author:
+  - family: Feldman
+    given: Harriet
+  - family: Friston
+    given: Karl J.
+  container-title: Frontiers in Human Neuroscience
+  volume: '4'
+  DOI: 10.3389/fnhum.2010.00215
+  issued:
+    date-parts:
+    - - 2010
+- id: friston2010
+  type: article-journal
+  title: 'The free-energy principle: a unified brain theory?'
+  author:
+  - family: Friston
+    given: Karl
+  container-title: Nature Reviews Neuroscience
+  volume: '11'
+  issue: '2'
+  page: 127-138
+  DOI: 10.1038/nrn2787
+  issued:
+    date-parts:
+    - - 2010
+- id: gnesotto2018
+  type: article-journal
+  title: 'Broken detailed balance and non-equilibrium dynamics in living systems: a review'
+  author:
+  - family: Gnesotto
+    given: F S
+  - family: Mura
+    given: F
+  - family: Gladrow
+    given: J
+  - family: Broedersz
+    given: C P
+  container-title: Reports on Progress in Physics
+  volume: '81'
+  issue: '6'
+  page: '066601'
+  DOI: 10.1088/1361-6633/aab3ed
+  issued:
+    date-parts:
+    - - 2018
+- id: gold2001
+  type: article-journal
+  title: Neural computations that underlie decisions about sensory stimuli
+  author:
+  - family: Gold
+    given: Joshua I.
+  - family: Shadlen
+    given: Michael N.
+  container-title: Trends in Cognitive Sciences
+  volume: '5'
+  issue: '1'
+  page: 10-16
+  DOI: 10.1016/s1364-6613(00)01567-9
+  issued:
+    date-parts:
+    - - 2001
+- id: gold2007
+  type: article-journal
+  title: The Neural Basis of Decision Making
+  author:
+  - family: Gold
+    given: Joshua I.
+  - family: Shadlen
+    given: Michael N.
+  container-title: Annual Review of Neuroscience
+  volume: '30'
+  issue: '1'
+  page: 535-574
+  DOI: 10.1146/annurev.neuro.29.051605.113038
+  issued:
+    date-parts:
+    - - 2007
+- id: hanks2014
+  type: article-journal
+  title: A neural mechanism of speed-accuracy tradeoff in macaque area LIP
+  author:
+  - family: Hanks
+    given: Timothy
+  - family: Kiani
+    given: Roozbeh
+  - family: Shadlen
+    given: Michael N
+  container-title: eLife
+  volume: '3'
+  DOI: 10.7554/elife.02260
+  issued:
+    date-parts:
+    - - 2014
+- id: harada2005
+  type: article-journal
+  title: Equality Connecting Energy Dissipation with a Violation of the Fluctuation-Response Relation
+  author:
+  - family: Harada
+    given: Takahiro
+  - family: Sasa
+    given: Shin-ichi
+  container-title: Physical Review Letters
+  volume: '95'
+  issue: '13'
+  DOI: 10.1103/physrevlett.95.130602
+  issued:
+    date-parts:
+    - - 2005
+- id: huk2005
+  type: article-journal
+  title: Neural Activity in Macaque Parietal Cortex Reflects Temporal Integration of Visual Motion Signals during
+    Perceptual Decision Making
+  author:
+  - family: Huk
+    given: Alexander C.
+  - family: Shadlen
+    given: Michael N.
+  container-title: The Journal of Neuroscience
+  volume: '25'
+  issue: '45'
+  page: 10420-10436
+  DOI: 10.1523/jneurosci.4684-04.2005
+  issued:
+    date-parts:
+    - - 2005
+- id: ibl2021
+  type: article-journal
+  title: Standardized and reproducible measurement of decision-making in mice
+  author:
+  - literal: The International Brain Laboratory
+  container-title: eLife
+  volume: '10'
+  DOI: 10.7554/elife.63711
+  issued:
+    date-parts:
+    - - 2021
+- id: isomura2023
+  type: article-journal
+  title: Experimental validation of the free-energy principle with in vitro neural networks
+  author:
+  - family: Isomura
+    given: Takuya
+  - family: Kotani
+    given: Kiyoshi
+  - family: Jimbo
+    given: Yasuhiko
+  - family: Friston
+    given: Karl J.
+  container-title: Nature Communications
+  volume: '14'
+  issue: '1'
+  DOI: 10.1038/s41467-023-40141-z
+  issued:
+    date-parts:
+    - - 2023
+- id: kalman1960
+  type: article-journal
+  title: A New Approach to Linear Filtering and Prediction Problems
+  author:
+  - family: Kalman
+    given: R. E.
+  container-title: Journal of Basic Engineering
+  volume: '82'
+  issue: '1'
+  page: 35-45
+  DOI: 10.1115/1.3662552
+  issued:
+    date-parts:
+    - - 1960
+- id: kiani2008
+  type: article-journal
+  title: Bounded Integration in Parietal Cortex Underlies Decisions Even When Viewing Duration Is Dictated by the
+    Environment
+  author:
+  - family: Kiani
+    given: Roozbeh
+  - family: Hanks
+    given: Timothy D.
+  - family: Shadlen
+    given: Michael N.
+  container-title: The Journal of Neuroscience
+  volume: '28'
+  issue: '12'
+  page: 3017-3029
+  DOI: 10.1523/jneurosci.4761-07.2008
+  issued:
+    date-parts:
+    - - 2008
+- id: kiani2014
+  type: article-journal
+  title: Dynamics of Neural Population Responses in Prefrontal Cortex Indicate Changes of Mind on Single Trials
+  author:
+  - family: Kiani
+    given: Roozbeh
+  - family: Cueva
+    given: Christopher J.
+  - family: Reppas
+    given: John B.
+  - family: Newsome
+    given: William T.
+  container-title: Current Biology
+  volume: '24'
+  issue: '13'
+  page: 1542-1547
+  DOI: 10.1016/j.cub.2014.05.049
+  issued:
+    date-parts:
+    - - 2014
+- id: kira2015
+  type: article-journal
+  title: A Neural Implementation of Wald’s Sequential Probability Ratio Test
+  author:
+  - family: Kira
+    given: Shinichiro
+  - family: Yang
+    given: Tianming
+  - family: Shadlen
+    given: Michael N.
+  container-title: Neuron
+  volume: '85'
+  issue: '4'
+  page: 861-873
+  DOI: 10.1016/j.neuron.2015.01.007
+  issued:
+    date-parts:
+    - - 2015
+- id: kramers1940
+  type: article-journal
+  title: Brownian motion in a field of force and the diffusion model of chemical reactions
+  author:
+  - family: Kramers
+    given: H.A.
+  container-title: Physica
+  volume: '7'
+  issue: '4'
+  page: 284-304
+  DOI: 10.1016/s0031-8914(40)90098-2
+  issued:
+    date-parts:
+    - - 1940
+- id: kubo1966
+  type: article-journal
+  title: The fluctuation-dissipation theorem
+  author:
+  - family: Kubo
+    given: R
+  container-title: Reports on Progress in Physics
+  volume: '29'
+  issue: '1'
+  page: 255-284
+  DOI: 10.1088/0034-4885/29/1/306
+  issued:
+    date-parts:
+    - - 1966
+- id: lakens2017
+  type: article-journal
+  title: Equivalence Tests
+  author:
+  - family: Lakens
+    given: Daniël
+  container-title: Social Psychological and Personality Science
+  volume: '8'
+  issue: '4'
+  page: 355-362
+  DOI: 10.1177/1948550617697177
+  issued:
+    date-parts:
+    - - 2017
+- id: latimer2015
+  type: article-journal
+  title: Single-trial spike trains in parietal cortex reveal discrete steps during decision-making
+  author:
+  - family: Latimer
+    given: Kenneth W.
+  - family: Yates
+    given: Jacob L.
+  - family: Meister
+    given: Miriam L. R.
+  - family: Huk
+    given: Alexander C.
+  - family: Pillow
+    given: Jonathan W.
+  container-title: Science
+  volume: '349'
+  issue: '6244'
+  page: 184-187
+  DOI: 10.1126/science.aaa4056
+  issued:
+    date-parts:
+    - - 2015
+- id: lynn2021
+  type: article-journal
+  title: Broken detailed balance and entropy production in the human brain
+  author:
+  - family: Lynn
+    given: Christopher W.
+  - family: Cornblath
+    given: Eli J.
+  - family: Papadopoulos
+    given: Lia
+  - family: Bertolero
+    given: Maxwell A.
+  - family: Bassett
+    given: Danielle S.
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '118'
+  issue: '47'
+  DOI: 10.1073/pnas.2109889118
+  issued:
+    date-parts:
+    - - 2021
+- id: martin2001
+  type: article-journal
+  title: Comparison of a hair bundle's spontaneous oscillations with its response to mechanical stimulation reveals
+    the underlying active process
+  author:
+  - family: Martin
+    given: P.
+  - family: Hudspeth
+    given: A. J.
+  - family: Jülicher
+    given: F.
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '98'
+  issue: '25'
+  page: 14380-14385
+  DOI: 10.1073/pnas.251530598
+  issued:
+    date-parts:
+    - - 2001
+- id: mizuno2007
+  type: article-journal
+  title: Nonequilibrium Mechanics of Active Cytoskeletal Networks
+  author:
+  - family: Mizuno
+    given: Daisuke
+  - family: Tardin
+    given: Catherine
+  - family: Schmidt
+    given: C. F.
+  - family: MacKintosh
+    given: F. C.
+  container-title: Science
+  volume: '315'
+  issue: '5810'
+  page: 370-373
+  DOI: 10.1126/science.1134404
+  issued:
+    date-parts:
+    - - 2007
+- id: okazawa2021
+  type: article-journal
+  title: Representational geometry of perceptual decisions in the monkey parietal cortex
+  author:
+  - family: Okazawa
+    given: Gouki
+  - family: Hatch
+    given: Christina E.
+  - family: Mancoo
+    given: Allan
+  - family: Machens
+    given: Christian K.
+  - family: Kiani
+    given: Roozbeh
+  container-title: Cell
+  volume: '184'
+  issue: '14'
+  page: 3748-3761.e18
+  DOI: 10.1016/j.cell.2021.05.022
+  issued:
+    date-parts:
+    - - 2021
+- id: palmer2005
+  type: article-journal
+  title: The effect of stimulus strength on the speed and accuracy of a perceptual decision
+  author:
+  - family: Palmer
+    given: John
+  - family: Huk
+    given: Alexander C.
+  - family: Shadlen
+    given: Michael N.
+  container-title: Journal of Vision
+  volume: '5'
+  issue: '5'
+  page: '1'
+  DOI: 10.1167/5.5.1
+  issued:
+    date-parts:
+    - - 2005
+- id: peixoto2021
+  type: article-journal
+  title: Decoding and perturbing decision states in real time
+  author:
+  - family: Peixoto
+    given: Diogo
+  - family: Verhein
+    given: Jessica R.
+  - family: Kiani
+    given: Roozbeh
+  - family: Kao
+    given: Jonathan C.
+  - family: Nuyujukian
+    given: Paul
+  - family: Chandrasekaran
+    given: Chandramouli
+  - family: Brown
+    given: Julian
+  - family: Fong
+    given: Sania
+  - family: Ryu
+    given: Stephen I.
+  - family: Shenoy
+    given: Krishna V.
+  - family: Newsome
+    given: William T.
+  container-title: Nature
+  volume: '591'
+  issue: '7851'
+  page: 604-609
+  DOI: 10.1038/s41586-020-03181-9
+  issued:
+    date-parts:
+    - - 2021
+- id: ratcliff1978
+  type: article-journal
+  title: A theory of memory retrieval
+  author:
+  - family: Ratcliff
+    given: Roger
+  container-title: Psychological Review
+  volume: '85'
+  issue: '2'
+  page: 59-108
+  DOI: 10.1037/0033-295x.85.2.59
+  issued:
+    date-parts:
+    - - 1978
+- id: ratcliff2008
+  type: article-journal
+  title: 'The Diffusion Decision Model: Theory and Data for Two-Choice Decision Tasks'
+  author:
+  - family: Ratcliff
+    given: Roger
+  - family: McKoon
+    given: Gail
+  container-title: Neural Computation
+  volume: '20'
+  issue: '4'
+  page: 873-922
+  DOI: 10.1162/neco.2008.12-06-420
+  issued:
+    date-parts:
+    - - 2008
+- id: redner2001
+  type: book
+  title: A Guide to First-Passage Processes
+  author:
+  - family: Redner
+    given: Sidney
+  publisher: Cambridge University Press
+  DOI: 10.1017/cbo9780511606014
+  issued:
+    date-parts:
+    - - 2001
+- id: risken1989
+  type: book
+  title: The Fokker-Planck Equation
+  author:
+  - family: Risken
+    given: Hannes
+  publisher: Springer
+  DOI: 10.1007/978-3-642-61544-3
+  issued:
+    date-parts:
+    - - 1989
+  edition: '2'
+- id: roitman2002
+  type: article-journal
+  title: Response of Neurons in the Lateral Intraparietal Area during a Combined Visual Discrimination Reaction
+    Time Task
+  author:
+  - family: Roitman
+    given: Jamie D.
+  - family: Shadlen
+    given: Michael N.
+  container-title: The Journal of Neuroscience
+  volume: '22'
+  issue: '21'
+  page: 9475-9489
+  DOI: 10.1523/jneurosci.22-21-09475.2002
+  issued:
+    date-parts:
+    - - 2002
+- id: sarracino2020
+  type: article-journal
+  title: Predicting brain evoked response to external stimuli from temporal correlations of spontaneous activity
+  author:
+  - family: Sarracino
+    given: A.
+  - family: Arviv
+    given: O.
+  - family: Shriki
+    given: O.
+  - family: de Arcangelis
+    given: L.
+  container-title: Physical Review Research
+  volume: '2'
+  issue: '3'
+  DOI: 10.1103/physrevresearch.2.033355
+  issued:
+    date-parts:
+    - - 2020
+- id: schuirmann1987
+  type: article-journal
+  title: A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence
+    of average bioavailability
+  author:
+  - family: Schuirmann
+    given: Donald J.
+  container-title: Journal of Pharmacokinetics and Biopharmaceutics
+  volume: '15'
+  issue: '6'
+  page: 657-680
+  DOI: 10.1007/bf01068419
+  issued:
+    date-parts:
+    - - 1987
+- id: seifert2012
+  type: article-journal
+  title: Stochastic thermodynamics, fluctuation theorems and molecular machines
+  author:
+  - family: Seifert
+    given: Udo
+  container-title: Reports on Progress in Physics
+  volume: '75'
+  issue: '12'
+  page: '126001'
+  DOI: 10.1088/0034-4885/75/12/126001
+  issued:
+    date-parts:
+    - - 2012
+- id: shadlen2001
+  type: article-journal
+  title: Neural Basis of a Perceptual Decision in the Parietal Cortex (Area LIP) of the Rhesus Monkey
+  author:
+  - family: Shadlen
+    given: Michael N.
+  - family: Newsome
+    given: William T.
+  container-title: Journal of Neurophysiology
+  volume: '86'
+  issue: '4'
+  page: 1916-1936
+  DOI: 10.1152/jn.2001.86.4.1916
+  issued:
+    date-parts:
+    - - 2001
+- id: shadlen2013
+  type: article-journal
+  title: Decision Making as a Window on Cognition
+  author:
+  - family: Shadlen
+    given: Michael N.
+  - family: Kiani
+    given: Roozbeh
+  container-title: Neuron
+  volume: '80'
+  issue: '3'
+  page: 791-806
+  DOI: 10.1016/j.neuron.2013.10.047
+  issued:
+    date-parts:
+    - - 2013
+- id: smith2003
+  type: article-journal
+  title: Estimating a State-Space Model from Point Process Observations
+  author:
+  - family: Smith
+    given: Anne C.
+  - family: Brown
+    given: Emery N.
+  container-title: Neural Computation
+  volume: '15'
+  issue: '5'
+  page: 965-991
+  DOI: 10.1162/089976603765202622
+  issued:
+    date-parts:
+    - - 2003
+- id: steinemann2024
+  type: article-journal
+  title: Direct observation of the neural computations underlying a single decision
+  author:
+  - family: Steinemann
+    given: Natalie
+  - family: Stine
+    given: Gabriel M
+  - family: Trautmann
+    given: Eric
+  - family: Zylberberg
+    given: Ariel
+  - family: Wolpert
+    given: Daniel M
+  - family: Shadlen
+    given: Michael N
+  container-title: eLife
+  volume: '12'
+  DOI: 10.7554/elife.90859
+  issued:
+    date-parts:
+    - - 2024
+  page: RP90859
+- id: steinemann2024data
+  type: dataset
+  title: Data for "Direct observation of the neural computations underlying a single decision"
+  author:
+  - family: Steinemann
+    given: Natalie
+  - family: Stine
+    given: Gabriel M
+  - family: Trautmann
+    given: Eric
+  - family: Zylberberg
+    given: Ariel
+  - family: Wolpert
+    given: Daniel M
+  - family: Shadlen
+    given: Michael N
+  publisher: Zenodo
+  DOI: 10.5281/zenodo.13207505
+  issued:
+    date-parts:
+    - - 2024
+- id: stine2023
+  type: article-journal
+  title: A neural mechanism for terminating decisions
+  author:
+  - family: Stine
+    given: Gabriel M.
+  - family: Trautmann
+    given: Eric M.
+  - family: Jeurissen
+    given: Danique
+  - family: Shadlen
+    given: Michael N.
+  container-title: Neuron
+  volume: '111'
+  issue: '16'
+  page: 2601-2613.e5
+  DOI: 10.1016/j.neuron.2023.05.028
+  issued:
+    date-parts:
+    - - 2023
+- id: wald1945
+  type: article-journal
+  title: Sequential Tests of Statistical Hypotheses
+  author:
+  - family: Wald
+    given: A.
+  container-title: The Annals of Mathematical Statistics
+  volume: '16'
+  issue: '2'
+  page: 117-186
+  DOI: 10.1214/aoms/1177731118
+  issued:
+    date-parts:
+    - - 1945
+- id: wichmann2001
+  type: article-journal
+  title: 'The psychometric function: I. Fitting, sampling, and goodness of fit'
+  author:
+  - family: Wichmann
+    given: Felix A.
+  - family: Hill
+    given: N. Jeremy
+  container-title: Perception & Psychophysics
+  volume: '63'
+  issue: '8'
+  page: 1293-1313
+  DOI: 10.3758/bf03194544
+  issued:
+    date-parts:
+    - - 2001
+- id: yang2007
+  type: article-journal
+  title: Probabilistic reasoning by neurons
+  author:
+  - family: Yang
+    given: Tianming
+  - family: Shadlen
+    given: Michael N.
+  container-title: Nature
+  volume: '447'
+  issue: '7148'
+  page: 1075-1080
+  DOI: 10.1038/nature05852
+  issued:
+    date-parts:
+    - - 2007
+- id: zylberberg2016
+  type: article-journal
+  title: The influence of evidence volatility on choice, reaction time and confidence in a perceptual decision
+  author:
+  - family: Zylberberg
+    given: Ariel
+  - family: Fetsch
+    given: Christopher R
+  - family: Shadlen
+    given: Michael N
+  container-title: eLife
+  volume: '5'
+  DOI: 10.7554/elife.17688
+  issued:
+    date-parts:
+    - - 2016

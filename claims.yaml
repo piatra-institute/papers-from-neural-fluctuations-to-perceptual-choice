@@ -1,0 +1,2362 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: 0a09b4ed7dd927a4222a578c4dfc05d779ea1017b6e17638d294a030d562a248
+claims:
+- id: a-naive
+  kind: computation
+  passage: One-bin increment variances predict a slope of 1.40 against a fitted 10.02, and variograms of undecided
+    trials predict 12.29, while the stopped split-half estimators predict 9.89.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred_naive/mean
+    reported: '1.40'
+    units: per unit coherence
+    conditions: mean over 48 simulated datasets, pure integrator, one-bin increment variance on undecided trials
+    decimals: 2
+- id: a-fit
+  kind: computation
+  passage: One-bin increment variances predict a slope of 1.40 against a fitted 10.02, and variograms of undecided
+    trials predict 12.29, while the stopped split-half estimators predict 9.89.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_fit/mean
+    reported: '10.02'
+    units: per unit coherence
+    conditions: logistic slope fitted to 3,000 choices per dataset, mean over 48
+    decimals: 2
+- id: a-vario
+  kind: computation
+  passage: One-bin increment variances predict a slope of 1.40 against a fitted 10.02, and variograms of undecided
+    trials predict 12.29, while the stopped split-half estimators predict 9.89.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred_vario/mean
+    reported: '12.29'
+    units: per unit coherence
+    conditions: variogram of undecided trials, lags 1-4 bins
+    decimals: 2
+- id: a-pred
+  kind: computation
+  passage: One-bin increment variances predict a slope of 1.40 against a fitted 10.02, and variograms of undecided
+    trials predict 12.29, while the stopped split-half estimators predict 9.89.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred/mean
+    reported: '9.89'
+    units: per unit coherence
+    conditions: stopped split-half estimators, sustained mobility
+    decimals: 2
+- id: a-N
+  kind: computation
+  passage: We estimate $D$ and $M$ from all trials through optional stopping and split-half cross moments, and test
+    the estimators on a simulated population of 200 Poisson neurons carrying a bounded accumulator.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/N
+    reported: '200'
+    units: neurons
+    conditions: simulated population size
+    decimals: 0
+- id: a-lr1
+  kind: computation
+  passage: Under leak, instability and drift variability the mean log ratio of fitted to predicted slope stays between
+    -0.044 and 0.051; urgency and a slow signal along the coding axis that does not drive the choice raise it to
+    0.108 and 0.097.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/log_ratio/mean
+    reported: '-0.044'
+    units: log ratio
+    conditions: leak, Lambda = 1, mean over 48 datasets
+    decimals: 3
+- id: a-lr2
+  kind: computation
+  passage: Under leak, instability and drift variability the mean log ratio of fitted to predicted slope stays between
+    -0.044 and 0.051; urgency and a slow signal along the coding axis that does not drive the choice raise it to
+    0.108 and 0.097.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/log_ratio/mean
+    reported: '0.051'
+    units: log ratio
+    conditions: instability, Lambda = -1
+    decimals: 3
+- id: a-lr3
+  kind: computation
+  passage: Under leak, instability and drift variability the mean log ratio of fitted to predicted slope stays between
+    -0.044 and 0.051; urgency and a slow signal along the coding axis that does not drive the choice raise it to
+    0.108 and 0.097.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/log_ratio/mean
+    reported: '0.108'
+    units: log ratio
+    conditions: urgency gain 1 + t/(1 s)
+    decimals: 3
+- id: a-lr4
+  kind: computation
+  passage: Under leak, instability and drift variability the mean log ratio of fitted to predicted slope stays between
+    -0.044 and 0.051; urgency and a slow signal along the coding axis that does not drive the choice raise it to
+    0.108 and 0.097.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/log_ratio/mean
+    reported: '0.097'
+    units: log ratio
+    conditions: slow signal along the coding axis
+    decimals: 3
+- id: a-trials
+  kind: computation
+  passage: With 8,000 trials the run-to-run SD of the log ratio is 0.080; an equivalence test with a ±25% margin
+    reaches a power of 0.8 at about 8,700 trials, and a ±10% margin needs about 48,000.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/trials
+    reported: 8,000
+    units: trials
+    conditions: 'reference design: zero, pulse, low-evidence and graded sets'
+    decimals: 0
+- id: a-sd
+  kind: computation
+  passage: With 8,000 trials the run-to-run SD of the log ratio is 0.080; an equivalence test with a ±25% margin
+    reaches a power of 0.8 at about 8,700 trials, and a ±10% margin needs about 48,000.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/sd_pooled
+    reported: '0.080'
+    units: log ratio
+    conditions: pooled kappa / sqrt(trials) at 8,000 trials
+    decimals: 3
+- id: a-n25
+  kind: computation
+  passage: With 8,000 trials the run-to-run SD of the log ratio is 0.080; an equivalence test with a ±25% margin
+    reaches a power of 0.8 at about 8,700 trials, and a ±10% margin needs about 48,000.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/trials_for_power80_25
+    reported: 8,700
+    units: trials
+    conditions: TOST at level 0.05, margin 25%, power 0.8, pooled SD
+    significant_digits: 2
+- id: a-n10
+  kind: computation
+  passage: With 8,000 trials the run-to-run SD of the log ratio is 0.080; an equivalence test with a ±25% margin
+    reaches a power of 0.8 at about 8,700 trials, and a ±10% margin needs about 48,000.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/trials_for_power80_10
+    reported: 48,000
+    units: trials
+    conditions: margin 10%
+    significant_digits: 2
+- id: s-daw
+  kind: source
+  passage: A softmax rule with an inverse temperature is fitted to choices in reinforcement-learning tasks [@daw2006],
+    and precision, an inverse variance that scales prediction errors, is inferred in models of attention [@feldman2010;
+    @friston2010].
+  evidence:
+    citation_id: daw2006
+    locator: Abstract
+    verification_note: 'Abstract: computational reinforcement-learning analysis of exploratory decisions in a gambling
+      task (softmax choice model).'
+    verified: true
+- id: s-feldman
+  kind: source
+  passage: A softmax rule with an inverse temperature is fitted to choices in reinforcement-learning tasks [@daw2006],
+    and precision, an inverse variance that scales prediction errors, is inferred in models of attention [@feldman2010;
+    @friston2010].
+  evidence:
+    citation_id: feldman2010
+    locator: Abstract
+    verification_note: 'Abstract: attention as inferring the level of uncertainty or precision during hierarchical
+      perception, in free-energy simulations.'
+    verified: true
+- id: s-cug
+  kind: source
+  passage: Out of equilibrium the ratio of fluctuation to response still defines an effective temperature, which
+    can depend on time scale [@cugliandolo1997; @cugliandolo2011]; hair bundles of the inner ear violate the equilibrium
+    relation, and their effective temperature diverges near the frequency of spontaneous oscillation [@martin2001].
+  evidence:
+    citation_id: cugliandolo1997
+    locator: Abstract
+    verification_note: 'Abstract: a time-scale-dependent effective temperature in nonequilibrium systems with small
+      heat flows.'
+    verified: true
+- id: s-cug11
+  kind: source
+  passage: Out of equilibrium the ratio of fluctuation to response still defines an effective temperature, which
+    can depend on time scale [@cugliandolo1997; @cugliandolo2011]; hair bundles of the inner ear violate the equilibrium
+    relation, and their effective temperature diverges near the frequency of spontaneous oscillation [@martin2001].
+  evidence:
+    citation_id: cugliandolo2011
+    locator: Abstract
+    verification_note: 'Abstract: effective temperature defined from deviations from the equilibrium fluctuation-dissipation
+      theorem.'
+    verified: true
+- id: s-martin
+  kind: source
+  passage: Out of equilibrium the ratio of fluctuation to response still defines an effective temperature, which
+    can depend on time scale [@cugliandolo1997; @cugliandolo2011]; hair bundles of the inner ear violate the equilibrium
+    relation, and their effective temperature diverges near the frequency of spontaneous oscillation [@martin2001].
+  evidence:
+    citation_id: martin2001
+    locator: Abstract
+    verification_note: 'Abstract: a hair bundle violates the fluctuation-dissipation theorem; a frequency-dependent
+      effective temperature diverges near the frequency of spontaneous oscillation.'
+    verified: true
+- id: s-harada
+  kind: source
+  passage: The size of the violation measures dissipation [@harada2005; @baiesi2009; @seifert2012], and the same
+    tests detect active processes in cytoskeletal networks and cells [@mizuno2007; @gnesotto2018] and broken detailed
+    balance in human brain recordings [@lynn2021].
+  evidence:
+    citation_id: harada2005
+    locator: Abstract
+    verification_note: 'Abstract: equality between the extent of fluctuation-response violation and the rate of
+      energy dissipation in Langevin systems.'
+    verified: true
+- id: s-baiesi
+  kind: source
+  passage: The size of the violation measures dissipation [@harada2005; @baiesi2009; @seifert2012], and the same
+    tests detect active processes in cytoskeletal networks and cells [@mizuno2007; @gnesotto2018] and broken detailed
+    balance in human brain recordings [@lynn2021].
+  evidence:
+    citation_id: baiesi2009
+    locator: Abstract
+    verification_note: 'Abstract: a generalized fluctuation-response relation for nonequilibrium states.'
+    verified: true
+- id: s-gnesotto
+  kind: source
+  passage: The size of the violation measures dissipation [@harada2005; @baiesi2009; @seifert2012], and the same
+    tests detect active processes in cytoskeletal networks and cells [@mizuno2007; @gnesotto2018] and broken detailed
+    balance in human brain recordings [@lynn2021].
+  evidence:
+    citation_id: gnesotto2018
+    locator: Abstract
+    verification_note: 'Abstract: methods based on violations of the fluctuation-dissipation theorem applied to
+      cytoskeletal networks, cytoplasm and membranes.'
+    verified: true
+- id: s-mizuno
+  kind: source
+  passage: The size of the violation measures dissipation [@harada2005; @baiesi2009; @seifert2012], and the same
+    tests detect active processes in cytoskeletal networks and cells [@mizuno2007; @gnesotto2018] and broken detailed
+    balance in human brain recordings [@lynn2021].
+  evidence:
+    citation_id: mizuno2007
+    locator: Abstract
+    verification_note: 'Abstract: active cytoskeletal networks driven by myosin motors; nonequilibrium mechanics.'
+    verified: true
+- id: s-lynn
+  kind: source
+  passage: The size of the violation measures dissipation [@harada2005; @baiesi2009; @seifert2012], and the same
+    tests detect active processes in cytoskeletal networks and cells [@mizuno2007; @gnesotto2018] and broken detailed
+    balance in human brain recordings [@lynn2021].
+  evidence:
+    citation_id: lynn2021
+    locator: Abstract
+    verification_note: 'Abstract: the human brain violates detailed balance at large scales.'
+    verified: true
+- id: s-arieli
+  kind: source
+  passage: Responses of cortex to stimuli have been linked to its ongoing fluctuations as well [@arieli1996; @churchland2010;
+    @sarracino2020].
+  evidence:
+    citation_id: arieli1996
+    locator: Abstract
+    verification_note: 'Abstract: evoked responses predicted by linear summation of the deterministic response and
+      preceding ongoing activity.'
+    verified: true
+- id: s-sarracino
+  kind: source
+  passage: Responses of cortex to stimuli have been linked to its ongoing fluctuations as well [@arieli1996; @churchland2010;
+    @sarracino2020].
+  evidence:
+    citation_id: sarracino2020
+    locator: Abstract
+    verification_note: 'Abstract: in a coarse-grained neural population model, the response to a stimulus is controlled
+      by correlations of resting fluctuations.'
+    verified: true
+- id: s-roitman
+  kind: source
+  passage: In random-dot motion discrimination, neurons of the lateral intraparietal area (LIP) ramp at a rate set
+    by motion strength and reach a common level before the saccade that reports the choice [@shadlen2001; @roitman2002].
+  evidence:
+    citation_id: roitman2002
+    locator: Abstract
+    verification_note: 'Abstract: LIP ramp-like changes predict the decision; steeper rise with stronger motion;
+      a threshold level marks completion.'
+    verified: true
+- id: s-shadlen01
+  kind: source
+  passage: In random-dot motion discrimination, neurons of the lateral intraparietal area (LIP) ramp at a rate set
+    by motion strength and reach a common level before the saccade that reports the choice [@shadlen2001; @roitman2002].
+  evidence:
+    citation_id: shadlen2001
+    locator: Abstract
+    verification_note: 'Abstract: LIP activity during motion viewing predicted the monkey''s judgment.'
+    verified: true
+- id: s-huk
+  kind: source
+  passage: Brief motion pulses have persistent effects on both choices and LIP activity [@huk2005], accumulation
+    stops at a bound even when the environment controls viewing time [@kiani2008], and the accumulated quantity
+    behaves like a log likelihood ratio [@gold2001; @gold2007; @yang2007; @kira2015].
+  evidence:
+    citation_id: huk2005
+    locator: Abstract
+    verification_note: 'Abstract: brief pulses had persistent effects on choices and LIP responses, lasting up to
+      800 ms.'
+    verified: true
+- id: s-kiani08
+  kind: source
+  passage: Brief motion pulses have persistent effects on both choices and LIP activity [@huk2005], accumulation
+    stops at a bound even when the environment controls viewing time [@kiani2008], and the accumulated quantity
+    behaves like a log likelihood ratio [@gold2001; @gold2007; @yang2007; @kira2015].
+  evidence:
+    citation_id: kiani2008
+    locator: Abstract
+    verification_note: 'Abstract: monkeys commit when accumulated evidence reaches a bound, even when the environment
+      controls stimulus duration.'
+    verified: true
+- id: s-kira
+  kind: source
+  passage: Brief motion pulses have persistent effects on both choices and LIP activity [@huk2005], accumulation
+    stops at a bound even when the environment controls viewing time [@kiani2008], and the accumulated quantity
+    behaves like a log likelihood ratio [@gold2001; @gold2007; @yang2007; @kira2015].
+  evidence:
+    citation_id: kira2015
+    locator: Abstract
+    verification_note: 'Abstract: accumulation of evidence in units of log likelihood ratio, Wald sequential test.'
+    verified: true
+- id: s-ratcliff
+  kind: source
+  passage: The account is a bounded diffusion with roots in sequential analysis [@wald1945; @ratcliff1978; @ratcliff2008;
+    @bogacz2006; @palmer2005; @shadlen2013].
+  evidence:
+    citation_id: ratcliff2008
+    locator: Abstract
+    verification_note: 'Abstract: the diffusion decision model for two-choice tasks.'
+    verified: true
+- id: s-bogacz
+  kind: source
+  passage: The account is a bounded diffusion with roots in sequential analysis [@wald1945; @ratcliff1978; @ratcliff2008;
+    @bogacz2006; @palmer2005; @shadlen2013].
+  evidence:
+    citation_id: bogacz2006
+    locator: Abstract
+    verification_note: 'Abstract: two-alternative models reduce to the drift-diffusion model implementing the optimal
+      sequential test.'
+    verified: true
+- id: s-palmer
+  kind: source
+  passage: The account is a bounded diffusion with roots in sequential analysis [@wald1945; @ratcliff1978; @ratcliff2008;
+    @bogacz2006; @palmer2005; @shadlen2013].
+  evidence:
+    citation_id: palmer2005
+    locator: Abstract
+    verification_note: 'Abstract: diffusion model of additive accumulation to a bound predicts psychometric and
+      chronometric functions.'
+    verified: true
+- id: s-steinemann
+  kind: source
+  passage: The variance and correlation of LIP activity across trials match those of a diffusion [@churchland2011],
+    single-trial decision variables can be decoded from populations [@kiani2014; @peixoto2021], and simultaneous
+    recordings of up to 203 LIP neurons with Neuropixels probes show a drift-diffusion signal on single decisions
+    [@steinemann2024; @stine2023].
+  evidence:
+    citation_id: steinemann2024
+    locator: Results and abstract
+    verification_note: 'Full text (PMC11488853): recordings of up to 203 LIP neurons with macaque Neuropixels probes;
+      a scalar population signal shows drift-diffusion on single decisions.'
+    verified: true
+- id: s-stine
+  kind: source
+  passage: The variance and correlation of LIP activity across trials match those of a diffusion [@churchland2011],
+    single-trial decision variables can be decoded from populations [@kiani2014; @peixoto2021], and simultaneous
+    recordings of up to 203 LIP neurons with Neuropixels probes show a drift-diffusion signal on single decisions
+    [@steinemann2024; @stine2023].
+  evidence:
+    citation_id: stine2023
+    locator: Abstract
+    verification_note: 'Abstract: LIP displays drift-diffusion single-trial dynamics; SC terminates decisions.'
+    verified: true
+- id: s-peixoto
+  kind: source
+  passage: The variance and correlation of LIP activity across trials match those of a diffusion [@churchland2011],
+    single-trial decision variables can be decoded from populations [@kiani2014; @peixoto2021], and simultaneous
+    recordings of up to 203 LIP neurons with Neuropixels probes show a drift-diffusion signal on single decisions
+    [@steinemann2024; @stine2023].
+  evidence:
+    citation_id: peixoto2021
+    locator: Abstract
+    verification_note: 'Abstract (PubMed): decoding and perturbing decision states in real time from population
+      recordings.'
+    verified: true
+- id: s-kiani14
+  kind: source
+  passage: The variance and correlation of LIP activity across trials match those of a diffusion [@churchland2011],
+    single-trial decision variables can be decoded from populations [@kiani2014; @peixoto2021], and simultaneous
+    recordings of up to 203 LIP neurons with Neuropixels probes show a drift-diffusion signal on single decisions
+    [@steinemann2024; @stine2023].
+  evidence:
+    citation_id: kiani2014
+    locator: Abstract
+    verification_note: 'Abstract (PubMed): the decision variable detected on individual trials from simultaneously
+      recorded units in prefrontal cortex.'
+    verified: true
+- id: s-latimer
+  kind: source
+  passage: Single-neuron spike trains have also been read as discrete steps [@latimer2015], LIP representations
+    depend on task [@okazawa2021], and in a pulse-based task in rats the noise lay in sensory processing rather
+    than in the accumulator [@brunton2013].
+  evidence:
+    citation_id: latimer2015
+    locator: Abstract
+    verification_note: 'Abstract: LIP spike trains in most cells showed discrete stepping rather than gradual integration.'
+    verified: true
+- id: s-okazawa
+  kind: source
+  passage: Single-neuron spike trains have also been read as discrete steps [@latimer2015], LIP representations
+    depend on task [@okazawa2021], and in a pulse-based task in rats the noise lay in sensory processing rather
+    than in the accumulator [@brunton2013].
+  evidence:
+    citation_id: okazawa2021
+    locator: Abstract
+    verification_note: 'Abstract (PubMed): LIP firing patterns for decision variables differ between face and motion
+      discrimination tasks.'
+    verified: true
+- id: s-brunton
+  kind: source
+  passage: Single-neuron spike trains have also been read as discrete steps [@latimer2015], LIP representations
+    depend on task [@okazawa2021], and in a pulse-based task in rats the noise lay in sensory processing rather
+    than in the accumulator [@brunton2013].
+  evidence:
+    citation_id: brunton2013
+    locator: Abstract
+    verification_note: 'Abstract: the diffusion constant of the accumulator was zero; noise was in sensory processing.'
+    verified: true
+- id: int-std
+  kind: interpretation
+  passage: For a bounded accumulator the choice probability depends on diffusion, mobility and bound only through
+    $D/(MB)$, a standard first-passage result [@palmer2005; @redner2001; @risken1989].
+  rationale: Standard first-passage result (Proposition 1, proved in the text).
+- id: p1
+  kind: interpretation
+  passage: '*Proof.* The exit probability $u(x)$ through $+B$ from a start $x$ solves $D u'''' + Mh\,u'' = 0$ with
+    $u(-B) = 0$ and $u(B) = 1$, so $u(x) = (1 - e^{-Mh(x+B)/D})/(1 - e^{-2MhB/D})$.'
+  rationale: Proposition 1 proved in the text; Monte Carlo agreement (/theory/ddm/max_abs_zscore below 3.5; /checks/exit_probabilities_match_closed_form).
+- id: p2
+  kind: interpretation
+  passage: '*Proof.* Per new unit of time the drift of $A$ is $a\kappa Mh$ and its diffusion $a^2\kappa D$, and
+    the bound sits at distance $|a|B$ from the start, so $D/(MB)$ is multiplied by $a^2\kappa/(a\kappa|a|) = \pm
+    1$, the sign recording a relabelling of the choices.'
+  rationale: Proposition 2 proved in the text; numerical check /theory/invariance and /checks/rescaling_leaves_theta_and_choice_unchanged.
+- id: p3
+  kind: interpretation
+  passage: '*Proof.* (a) With the scale density $\exp(-(vy - \lambda y^2/2)/D)$, the exit probability from 0 is
+    the integral of the density over $(-B, 0)$ divided by its integral over $(-B, B)$.'
+  rationale: Proposition 3 proved in the text; checks against quadrature and Monte Carlo (/theory/leak, /theory/drift_var,
+    /theory/start_var, /theory/start_bias).
+- id: s-kramers
+  kind: source
+  passage: The leak limit has a physical reading.
+  evidence:
+    citation_id: kramers1940
+    locator: Title
+    verification_note: 'Standard result: escape over a potential barrier (title and standard content).'
+    verified: true
+- id: quad
+  kind: interpretation
+  passage: The closed forms agree with quadrature of the scale density to within $5 \times 10^{-7}$ for $\Lambda$
+    from -2 to 5 and with Monte Carlo simulation of 40,000 trials per condition.
+  rationale: 'Largest difference between closed form and quadrature: /theory/leak/max_err = 4.3e-7 for Lambda in
+    {-2,-1,-0.5,0.5,1,2,5}.'
+- id: mc-n
+  kind: computation
+  passage: The closed forms agree with quadrature of the scale density to within $5 \times 10^{-7}$ for $\Lambda$
+    from -2 to 5 and with Monte Carlo simulation of 40,000 trials per condition.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/ddm/n
+    reported: 40,000
+    units: trials
+    conditions: Monte Carlo trials per condition
+    decimals: 0
+- id: lf1
+  kind: computation
+  passage: A leak number of 1, which means the leak acts on the same time scale as diffusion across the bound, multiplies
+    the slope by 1.175, the same instability multiplies it by 0.846, and drift variability with $s = 1$ by 0.826.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/4/factor
+    reported: '1.175'
+    units: ratio
+    conditions: Lambda = 1
+    decimals: 3
+- id: lf2
+  kind: computation
+  passage: A leak number of 1, which means the leak acts on the same time scale as diffusion across the bound, multiplies
+    the slope by 1.175, the same instability multiplies it by 0.846, and drift variability with $s = 1$ by 0.826.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/1/factor
+    reported: '0.846'
+    units: ratio
+    conditions: Lambda = -1
+    decimals: 3
+- id: lf3
+  kind: computation
+  passage: A leak number of 1, which means the leak acts on the same time scale as diffusion across the bound, multiplies
+    the slope by 1.175, the same instability multiplies it by 0.846, and drift variability with $s = 1$ by 0.826.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/drift_var/rows/1/factor
+    reported: '0.826'
+    units: ratio
+    conditions: s = 1
+    decimals: 3
+- id: t1-l3
+  kind: computation
+  passage: '| leak | $\Lambda$ = 0.5, 1, 2, 5 | 1.086, 1.175, 1.351, 1.717 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/3/factor
+    reported: '1.086'
+    units: ratio
+    conditions: leak, row 3 of /theory/leak/rows
+    decimals: 3
+- id: t1-l4
+  kind: computation
+  passage: '| leak | $\Lambda$ = 0.5, 1, 2, 5 | 1.086, 1.175, 1.351, 1.717 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/4/factor
+    reported: '1.175'
+    units: ratio
+    conditions: leak, row 4 of /theory/leak/rows
+    decimals: 3
+- id: t1-l5
+  kind: computation
+  passage: '| leak | $\Lambda$ = 0.5, 1, 2, 5 | 1.086, 1.175, 1.351, 1.717 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/5/factor
+    reported: '1.351'
+    units: ratio
+    conditions: leak, row 5 of /theory/leak/rows
+    decimals: 3
+- id: t1-l6
+  kind: computation
+  passage: '| leak | $\Lambda$ = 0.5, 1, 2, 5 | 1.086, 1.175, 1.351, 1.717 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/6/factor
+    reported: '1.717'
+    units: ratio
+    conditions: leak, row 6 of /theory/leak/rows
+    decimals: 3
+- id: t1-i2
+  kind: computation
+  passage: '| instability | $\Lambda$ = -0.5, -1, -2 | 0.920, 0.846, 0.723 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/2/factor
+    reported: '0.920'
+    units: ratio
+    conditions: instability, row 2 of /theory/leak/rows
+    decimals: 3
+- id: t1-i1
+  kind: computation
+  passage: '| instability | $\Lambda$ = -0.5, -1, -2 | 0.920, 0.846, 0.723 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/1/factor
+    reported: '0.846'
+    units: ratio
+    conditions: instability, row 1 of /theory/leak/rows
+    decimals: 3
+- id: t1-i0
+  kind: computation
+  passage: '| instability | $\Lambda$ = -0.5, -1, -2 | 0.920, 0.846, 0.723 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/leak/rows/0/factor
+    reported: '0.723'
+    units: ratio
+    conditions: instability, row 0 of /theory/leak/rows
+    decimals: 3
+- id: t1-d0
+  kind: computation
+  passage: '| drift variability | $s$ = 0.5, 1, 2 | 0.944, 0.826, 0.606 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/drift_var/rows/0/factor
+    reported: '0.944'
+    units: ratio
+    conditions: drift variability, row 0
+    decimals: 3
+- id: t1-d1
+  kind: computation
+  passage: '| drift variability | $s$ = 0.5, 1, 2 | 0.944, 0.826, 0.606 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/drift_var/rows/1/factor
+    reported: '0.826'
+    units: ratio
+    conditions: drift variability, row 1
+    decimals: 3
+- id: t1-d2
+  kind: computation
+  passage: '| drift variability | $s$ = 0.5, 1, 2 | 0.944, 0.826, 0.606 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/drift_var/rows/2/factor
+    reported: '0.606'
+    units: ratio
+    conditions: drift variability, row 2
+    decimals: 3
+- id: t1-z
+  kind: computation
+  passage: '| start-point offset | $z/B$ = 0.3 | 0.910 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/start_bias/rows/2/factor
+    reported: '0.910'
+    units: ratio
+    conditions: z/B = 0.3
+    decimals: 3
+- id: t1-sz
+  kind: computation
+  passage: '| start-point spread | $s_z/B$ = 0.6 | 0.880 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/start_var/rows/2/factor
+    reported: '0.880'
+    units: ratio
+    conditions: sz/B = 0.6
+    decimals: 3
+- id: cb-D
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reference/D
+    reported: '0.8'
+    units: per s
+    conditions: reference diffusion
+    decimals: 1
+- id: cb-M
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reference/M
+    reported: '8'
+    units: per unit coherence per s
+    conditions: reference mobility
+    decimals: 0
+- id: cb-s
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/params/slope
+    reported: '10'
+    units: per unit coherence
+    conditions: M B / D
+    decimals: 0
+- id: cb-f1
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/1/slope_fit
+    reported: '8.54'
+    units: per unit coherence
+    conditions: logistic slope fitted to simulated choices, hyperbolic collapse
+    decimals: 2
+- id: cb-f2
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/2/slope_fit
+    reported: '7.82'
+    units: per unit coherence
+    conditions: logistic slope fitted to simulated choices, hyperbolic collapse
+    decimals: 2
+- id: cb-f3
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/3/slope_fit
+    reported: '6.94'
+    units: per unit coherence
+    conditions: logistic slope fitted to simulated choices, hyperbolic collapse
+    decimals: 2
+- id: cb-b1
+  kind: computation
+  passage: Replacing $B_0$ by the mean bound $\bar B$ at the time of decision on trials below 10% coherence gives
+    $M\bar B/D$ of 8.32, 7.52 and 6.61, slightly below the fitted slopes.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/1/naive_Bbar
+    reported: '8.32'
+    units: per unit coherence
+    conditions: M Bbar / D, Bbar the mean bound at decision below 10% coherence
+    decimals: 2
+- id: cb-b2
+  kind: computation
+  passage: Replacing $B_0$ by the mean bound $\bar B$ at the time of decision on trials below 10% coherence gives
+    $M\bar B/D$ of 8.32, 7.52 and 6.61, slightly below the fitted slopes.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/2/naive_Bbar
+    reported: '7.52'
+    units: per unit coherence
+    conditions: M Bbar / D, Bbar the mean bound at decision below 10% coherence
+    decimals: 2
+- id: cb-b3
+  kind: computation
+  passage: Replacing $B_0$ by the mean bound $\bar B$ at the time of decision on trials below 10% coherence gives
+    $M\bar B/D$ of 8.32, 7.52 and 6.61, slightly below the fitted slopes.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/3/naive_Bbar
+    reported: '6.61'
+    units: per unit coherence
+    conditions: M Bbar / D, Bbar the mean bound at decision below 10% coherence
+    decimals: 2
+- id: cb-f0
+  kind: computation
+  passage: With $B(t) = B_0(1 - t/(t + t_{50}))$ and the reference parameters ($D = 0.8$ per s and $M = 8$ per unit
+    coherence per s with $B_0 = 1$, a slope of 10 per unit coherence), the logistic slope fitted to 66,000 simulated
+    choices over eleven coherences is 8.54, 7.82 and 6.94 for $t_{50}$ of 2, 1 and 0.5 s, against 9.90 for the fixed
+    bound.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /collapsing_bounds/0/slope_fit
+    reported: '9.90'
+    units: per unit coherence
+    conditions: fixed bound
+    decimals: 2
+- id: cb-n
+  kind: interpretation
+  passage: Bounds that collapse with time have no closed form.
+  rationale: collapsing_bounds() in simulation/analyses.py uses n = 66,000 trials spread over 11 coherences.
+- id: fig1-n
+  kind: computation
+  passage: (a) Choice probability against evidence for four parameter sets; the first three share $D/(MB) = 0.1$
+    and fall on one curve (lines exact, symbols Monte Carlo with 6,000 trials per point).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /fp_curves/n
+    reported: 6,000
+    units: trials
+    conditions: Monte Carlo trials per point
+    decimals: 0
+- id: p4
+  kind: interpretation
+  passage: '*Proof.* $Sw^* = K^{-1}f$, so $-C''_{w^*}(\tau) = w^{*\top}Ke^{-K\tau}K^{-1}f = w^{*\top}e^{-K\tau}f$
+    because $K$ commutes with $e^{-K\tau}$.'
+  rationale: Proposition 4 proved in the text; numerical identity /fdr/identity_residual and constant ratio along
+    the Fisher readout in both cases (/checks/fisher_readout_identity).
+- id: s-kubo
+  kind: source
+  passage: An equilibrium version of the test would record a decoded variable $A$ without evidence, compute its
+    autocovariance $C(\tau)$, perturb with weak evidence to obtain the response function $R(\tau)$, and ask whether
+    $-C'(\tau)/R(\tau)$ is constant in lag, as the fluctuation-dissipation theorem requires at equilibrium for the
+    observable conjugate to the perturbation.
+  evidence:
+    citation_id: kubo1966
+    locator: Title
+    verification_note: 'Standard result: the fluctuation-dissipation theorem (title and standard content).'
+    verified: true
+- id: fd-1
+  kind: computation
+  passage: In a two-dimensional example with a common stationary covariance (Figure 2), the conjugate readout and
+    the Fisher discriminant coincide at detailed balance and the ratio is constant to rounding error along both,
+    while along the first coordinate it varies by 29% and along the mean-response direction by 95% over the lags
+    shown.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /fdr/two_d/detailed balance/readouts/first coordinate/max_rel_dev
+    reported: 29%
+    units: percent
+    conditions: largest relative variation over lags 0-3 at detailed balance
+    decimals: 0
+    scale: 100
+- id: fd-2
+  kind: computation
+  passage: In a two-dimensional example with a common stationary covariance (Figure 2), the conjugate readout and
+    the Fisher discriminant coincide at detailed balance and the ratio is constant to rounding error along both,
+    while along the first coordinate it varies by 29% and along the mean-response direction by 95% over the lags
+    shown.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /fdr/two_d/detailed balance/readouts/mean response/max_rel_dev
+    reported: 95%
+    units: percent
+    conditions: mean-response readout at detailed balance
+    decimals: 0
+    scale: 100
+- id: fd-3
+  kind: computation
+  passage: With a rotational component that breaks detailed balance, the Fisher discriminant departs from the conjugate
+    readout by 70°, the ratio along it remains constant, and the response along the conjugate readout changes sign.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /fdr/two_d/broken detailed balance/angle_deg
+    reported: '70'
+    units: degrees
+    conditions: angle between Fisher discriminant and conjugate readout
+    decimals: 0
+- id: p5
+  kind: interpretation
+  passage: '*Proof.* $X_t - \int_0^t Mh$ and, at $h = 0$, $X_t^2 - 2Dt$ are martingales; $t\wedge\tau$ is a bounded
+    stopping time, so optional stopping applies.'
+  rationale: 'Proposition 5: optional stopping for bounded stopping times; the estimators built on it are checked
+    by simulation (/scenarios/integrator).'
+- id: s-smith
+  kind: source
+  passage: The proposition turns the absorbing bound from a source of bias into part of the estimator.
+  evidence:
+    citation_id: smith2003
+    locator: Abstract
+    verification_note: 'Abstract: state-space model with point-process observations, EM estimation.'
+    verified: true
+- id: d-D
+  kind: computation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reference/D
+    reported: '0.8'
+    units: per s
+    conditions: reference diffusion
+    decimals: 1
+- id: d-M
+  kind: computation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reference/M
+    reported: '8'
+    units: per unit coherence per s
+    conditions: reference mobility
+    decimals: 0
+- id: d-B
+  kind: computation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /reference/B
+    reported: '1'
+    units: bound units
+    conditions: bound
+    decimals: 0
+- id: d-sl
+  kind: computation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /theory/params/slope
+    reported: '10'
+    units: per unit coherence
+    conditions: M B / D
+    decimals: 0
+- id: d-dt
+  kind: computation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/dt
+    reported: '2'
+    units: ms
+    conditions: latent step
+    decimals: 0
+    scale: 1000
+- id: d-mdt
+  kind: interpretation
+  passage: The decision variable followed the integrator with $D = 0.8$ per s, $M = 8$ per unit coherence per s
+    and $B = 1$, a slope of 10 per unit coherence and a mean decision time of 0.625 s at zero evidence, simulated
+    in 2 ms steps with a Brownian-bridge test for crossings between steps.
+  rationale: Mean exit time from the midpoint at zero drift is B^2/(2D) = 1/(1.6) = 0.625 s (first-passage result).
+- id: d-N
+  kind: computation
+  passage: A population of 200 neurons had baseline rates between 15 and 35 Hz and gains on the decision variable
+    proportional to their baselines, bounded so that rates stayed positive, and emitted Poisson counts in 20 ms
+    bins.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/N
+    reported: '200'
+    units: neurons
+    conditions: population
+    decimals: 0
+- id: d-bin
+  kind: computation
+  passage: A population of 200 neurons had baseline rates between 15 and 35 Hz and gains on the decision variable
+    proportional to their baselines, bounded so that rates stayed positive, and emitted Poisson counts in 20 ms
+    bins.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/bin
+    reported: '20'
+    units: ms
+    conditions: bin width
+    decimals: 0
+    scale: 1000
+- id: d-tnd
+  kind: computation
+  passage: After the crossing the represented variable stayed at the bound until the saccade, 0.3 s later.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/tnd
+    reported: '0.3'
+    units: s
+    conditions: non-decision time
+    decimals: 1
+- id: d-train
+  kind: computation
+  passage: Linear discriminants with strong shrinkage were trained on 400 trials at ±51.2% coherence, for the full
+    population and for two random halves, and frozen.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/n_train
+    reported: '400'
+    units: trials
+    conditions: decoder training set
+    decimals: 0
+- id: d-n0
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/n_zero
+    reported: 1,000
+    units: trials
+    conditions: zero-coherence set
+    decimals: 0
+- id: d-np
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/n_pulse
+    reported: 2,000
+    units: trials
+    conditions: pulse set
+    decimals: 0
+- id: d-pd
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/pulse_dur
+    reported: '100'
+    units: ms
+    conditions: pulse duration
+    decimals: 0
+    scale: 1000
+- id: d-ph
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/pulse_dh
+    reported: 20%
+    units: coherence
+    conditions: pulse strength
+    decimals: 0
+    scale: 100
+- id: d-on0
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/pulse_on/0
+    reported: '0.1'
+    units: s
+    conditions: earliest onset
+    decimals: 1
+- id: d-on1
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/pulse_on/1
+    reported: '0.5'
+    units: s
+    conditions: latest onset
+    decimals: 1
+- id: d-nn
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/n_neural
+    reported: 2,000
+    units: trials
+    conditions: low-evidence set
+    decimals: 0
+- id: d-ng
+  kind: computation
+  passage: 'Separate trial sets served each estimate: 1,000 zero-coherence trials for $D$, 2,000 zero-coherence
+    trials with a 100 ms pulse of ±20% coherence at a random onset between 0.1 and 0.5 s for the pulse estimate
+    of $M$, 2,000 trials at ±6.4, 12.8 and 25.6% for the sustained estimate of $M$, and 3,000 trials over eleven
+    coherences from -51.2 to 51.2% whose choices gave the fitted slope.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /design/n_graded
+    reported: 3,000
+    units: trials
+    conditions: graded set for choices
+    decimals: 0
+- id: r-nrep
+  kind: computation
+  passage: Over 48 simulated datasets the slope fitted to choices was 10.02 (SD 0.44) and the stopped split-half
+    estimators predicted 9.89 (SD 0.66).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/_nrep
+    reported: '48'
+    units: datasets
+    conditions: replicates per generating model
+    decimals: 0
+- id: r-fit
+  kind: computation
+  passage: Over 48 simulated datasets the slope fitted to choices was 10.02 (SD 0.44) and the stopped split-half
+    estimators predicted 9.89 (SD 0.66).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_fit/mean
+    reported: '10.02'
+    units: per unit coherence
+    conditions: mean
+    decimals: 2
+- id: r-fitsd
+  kind: computation
+  passage: Over 48 simulated datasets the slope fitted to choices was 10.02 (SD 0.44) and the stopped split-half
+    estimators predicted 9.89 (SD 0.66).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_fit/sd
+    reported: '0.44'
+    units: per unit coherence
+    conditions: SD across datasets
+    decimals: 2
+- id: r-pred
+  kind: computation
+  passage: Over 48 simulated datasets the slope fitted to choices was 10.02 (SD 0.44) and the stopped split-half
+    estimators predicted 9.89 (SD 0.66).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred/mean
+    reported: '9.89'
+    units: per unit coherence
+    conditions: mean
+    decimals: 2
+- id: r-predsd
+  kind: computation
+  passage: Over 48 simulated datasets the slope fitted to choices was 10.02 (SD 0.44) and the stopped split-half
+    estimators predicted 9.89 (SD 0.66).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred/sd
+    reported: '0.66'
+    units: per unit coherence
+    conditions: SD across datasets
+    decimals: 2
+- id: r-lr
+  kind: computation
+  passage: The mean log ratio of fitted to predicted slope was 0.014 (SE 0.011), with an SD of 0.079 across datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/mean
+    reported: '0.014'
+    units: log ratio
+    conditions: mean
+    decimals: 3
+- id: r-lrse
+  kind: computation
+  passage: The mean log ratio of fitted to predicted slope was 0.014 (SE 0.011), with an SD of 0.079 across datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/se
+    reported: '0.011'
+    units: log ratio
+    conditions: SE of the mean
+    decimals: 3
+- id: r-lrsd
+  kind: computation
+  passage: The mean log ratio of fitted to predicted slope was 0.014 (SE 0.011), with an SD of 0.079 across datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/sd
+    reported: '0.079'
+    units: log ratio
+    conditions: SD across datasets
+    decimals: 3
+- id: r-D
+  kind: computation
+  passage: The estimates themselves were $D/B^2$ = 0.800 against 0.8 and $M/B$ = 7.90 against 8; the pulse estimate
+    of $M/B$ was 8.28, with twice the spread of the sustained estimate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/D_over_B2/mean
+    reported: '0.800'
+    units: per s
+    conditions: mean D/B^2
+    decimals: 3
+- id: r-M
+  kind: computation
+  passage: The estimates themselves were $D/B^2$ = 0.800 against 0.8 and $M/B$ = 7.90 against 8; the pulse estimate
+    of $M/B$ was 8.28, with twice the spread of the sustained estimate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/M_over_B/mean
+    reported: '7.90'
+    units: per unit coherence per s
+    conditions: mean sustained M/B
+    decimals: 2
+- id: r-Mp
+  kind: computation
+  passage: The estimates themselves were $D/B^2$ = 0.800 against 0.8 and $M/B$ = 7.90 against 8; the pulse estimate
+    of $M/B$ was 8.28, with twice the spread of the sustained estimate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/Mp_over_B/mean
+    reported: '8.28'
+    units: per unit coherence per s
+    conditions: mean pulse M/B
+    decimals: 2
+- id: r-naive
+  kind: computation
+  passage: The naive estimator, the variance of one-bin increments of the full decoder on undecided trials, predicted
+    a slope of 1.40, because spiking noise in a 20 ms bin dominates the diffusion of the decision variable.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred_naive/mean
+    reported: '1.40'
+    units: per unit coherence
+    conditions: mean
+    decimals: 2
+- id: r-vario
+  kind: computation
+  passage: A variogram on undecided trials, which removes white observation noise through its intercept, predicted
+    12.29, too steep because trajectories still undecided at a given time have been selected away from the bounds
+    and diffuse less (Figure 3).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred_vario/mean
+    reported: '12.29'
+    units: per unit coherence
+    conditions: mean
+    decimals: 2
+- id: fig3-n
+  kind: computation
+  passage: (b) Slopes predicted by four estimators over 48 datasets (mean ± SD, logarithmic axis) against the slope
+    fitted to choices (band).](../simulation/output/figures/estimators.png)
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/_nrep
+    reported: '48'
+    units: datasets
+    conditions: replicates
+    decimals: 0
+- id: t-0
+  kind: computation
+  passage: Misstating the non-decision time by 50 ms shifts the mean log ratio from -0.018 to 0.029 (for 0.25 s)
+    or -0.056 (for 0.35 s), so the non-decision time must be known to a few tens of milliseconds, for example from
+    the neural signature of termination.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/tnd/0.3/mean_log_ratio
+    reported: '-0.018'
+    units: log ratio
+    conditions: correct non-decision time, 32 datasets
+    decimals: 3
+- id: t-1
+  kind: computation
+  passage: Misstating the non-decision time by 50 ms shifts the mean log ratio from -0.018 to 0.029 (for 0.25 s)
+    or -0.056 (for 0.35 s), so the non-decision time must be known to a few tens of milliseconds, for example from
+    the neural signature of termination.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/tnd/0.25/mean_log_ratio
+    reported: '0.029'
+    units: log ratio
+    conditions: assumed 0.25 s
+    decimals: 3
+- id: t-2
+  kind: computation
+  passage: Misstating the non-decision time by 50 ms shifts the mean log ratio from -0.018 to 0.029 (for 0.25 s)
+    or -0.056 (for 0.35 s), so the non-decision time must be known to a few tens of milliseconds, for example from
+    the neural signature of termination.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/tnd/0.35/mean_log_ratio
+    reported: '-0.056'
+    units: log ratio
+    conditions: assumed 0.35 s
+    decimals: 3
+- id: n-200
+  kind: computation
+  passage: With 50 neurons instead of 200 the SD of the log ratio rises from 0.079 to 0.133, and 400 neurons reduce
+    it only to 0.074, because the latent diffusion dominates once observation noise is averaged out.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/sd
+    reported: '0.079'
+    units: log ratio
+    conditions: 200 neurons, 48 datasets
+    decimals: 3
+- id: n-50
+  kind: computation
+  passage: With 50 neurons instead of 200 the SD of the log ratio rises from 0.079 to 0.133, and 400 neurons reduce
+    it only to 0.074, because the latent diffusion dominates once observation noise is averaged out.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/neurons/50/sd
+    reported: '0.133'
+    units: log ratio
+    conditions: 50 neurons, 32 datasets
+    decimals: 3
+- id: n-400
+  kind: computation
+  passage: With 50 neurons instead of 200 the SD of the log ratio rises from 0.079 to 0.133, and 400 neurons reduce
+    it only to 0.074, because the latent diffusion dominates once observation noise is averaged out.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/neurons/400/sd
+    reported: '0.074'
+    units: log ratio
+    conditions: 400 neurons, 32 datasets
+    decimals: 3
+- id: g-e
+  kind: computation
+  passage: Exact Poisson counts and the Gaussian approximation used for most runs give mean log ratios of -0.002
+    and -0.013 over 16 datasets each.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/exact_vs_gaussian/exact/mean_log_ratio
+    reported: '-0.002'
+    units: log ratio
+    conditions: 16 datasets, exact Poisson
+    decimals: 3
+- id: g-g
+  kind: computation
+  passage: Exact Poisson counts and the Gaussian approximation used for most runs give mean log ratios of -0.002
+    and -0.013 over 16 datasets each.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sensitivity/exact_vs_gaussian/gaussian/mean_log_ratio
+    reported: '-0.013'
+    units: log ratio
+    conditions: 16 datasets, Gaussian
+    decimals: 3
+- id: t2-integrator-f
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_fit/mean
+    reported: '10.02'
+    units: per unit coherence
+    conditions: integrator, mean over 48
+    decimals: 2
+- id: t2-integrator-p
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/beta_pred/mean
+    reported: '9.89'
+    units: per unit coherence
+    conditions: integrator, mean over 48
+    decimals: 2
+- id: t2-integrator-l
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/mean
+    reported: '0.014'
+    units: log ratio
+    conditions: integrator, mean
+    decimals: 3
+- id: t2-integrator-s
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/log_ratio/se
+    reported: '0.011'
+    units: log ratio
+    conditions: integrator, SE
+    decimals: 3
+- id: t2-integrator-e
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/late_over_early/mean
+    reported: '1.03'
+    units: ratio
+    conditions: integrator, late/early D/(MB)
+    decimals: 2
+- id: t2-integrator-m
+  kind: computation
+  passage: '| integrator | 10.02 | 9.89 | 0.014 (0.011) | 1.03 | 1.05 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/M_pulse_over_sustained/mean
+    reported: '1.05'
+    units: ratio
+    conditions: integrator, pulse/sustained M
+    decimals: 2
+- id: t2-leak-f
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/beta_fit/mean
+    reported: '11.48'
+    units: per unit coherence
+    conditions: leak, mean over 48
+    decimals: 2
+- id: t2-leak-p
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/beta_pred/mean
+    reported: '12.01'
+    units: per unit coherence
+    conditions: leak, mean over 48
+    decimals: 2
+- id: t2-leak-l
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/log_ratio/mean
+    reported: '-0.044'
+    units: log ratio
+    conditions: leak, mean
+    decimals: 3
+- id: t2-leak-s
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/log_ratio/se
+    reported: '0.012'
+    units: log ratio
+    conditions: leak, SE
+    decimals: 3
+- id: t2-leak-e
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/late_over_early/mean
+    reported: '0.97'
+    units: ratio
+    conditions: leak, late/early D/(MB)
+    decimals: 2
+- id: t2-leak-m
+  kind: computation
+  passage: '| leak | 11.48 | 12.01 | -0.044 (0.012) | 0.97 | 1.12 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/M_pulse_over_sustained/mean
+    reported: '1.12'
+    units: ratio
+    conditions: leak, pulse/sustained M
+    decimals: 2
+- id: t2-instability-f
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/beta_fit/mean
+    reported: '8.66'
+    units: per unit coherence
+    conditions: instability, mean over 48
+    decimals: 2
+- id: t2-instability-p
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/beta_pred/mean
+    reported: '8.23'
+    units: per unit coherence
+    conditions: instability, mean over 48
+    decimals: 2
+- id: t2-instability-l
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/log_ratio/mean
+    reported: '0.051'
+    units: log ratio
+    conditions: instability, mean
+    decimals: 3
+- id: t2-instability-s
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/log_ratio/se
+    reported: '0.010'
+    units: log ratio
+    conditions: instability, SE
+    decimals: 3
+- id: t2-instability-e
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/late_over_early/mean
+    reported: '1.04'
+    units: ratio
+    conditions: instability, late/early D/(MB)
+    decimals: 2
+- id: t2-instability-m
+  kind: computation
+  passage: '| instability | 8.66 | 8.23 | 0.051 (0.010) | 1.04 | 0.94 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/M_pulse_over_sustained/mean
+    reported: '0.94'
+    units: ratio
+    conditions: instability, pulse/sustained M
+    decimals: 2
+- id: t2-drift_variability-f
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/beta_fit/mean
+    reported: '8.51'
+    units: per unit coherence
+    conditions: drift variability, mean over 48
+    decimals: 2
+- id: t2-drift_variability-p
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/beta_pred/mean
+    reported: '8.74'
+    units: per unit coherence
+    conditions: drift variability, mean over 48
+    decimals: 2
+- id: t2-drift_variability-l
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/log_ratio/mean
+    reported: '-0.026'
+    units: log ratio
+    conditions: drift variability, mean
+    decimals: 3
+- id: t2-drift_variability-s
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/log_ratio/se
+    reported: '0.012'
+    units: log ratio
+    conditions: drift variability, SE
+    decimals: 3
+- id: t2-drift_variability-e
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/late_over_early/mean
+    reported: '1.12'
+    units: ratio
+    conditions: drift variability, late/early D/(MB)
+    decimals: 2
+- id: t2-drift_variability-m
+  kind: computation
+  passage: '| drift variability | 8.51 | 8.74 | -0.026 (0.012) | 1.12 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/M_pulse_over_sustained/mean
+    reported: '1.03'
+    units: ratio
+    conditions: drift variability, pulse/sustained M
+    decimals: 2
+- id: t2-urgency-f
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/beta_fit/mean
+    reported: '7.87'
+    units: per unit coherence
+    conditions: urgency, mean over 48
+    decimals: 2
+- id: t2-urgency-p
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/beta_pred/mean
+    reported: '7.07'
+    units: per unit coherence
+    conditions: urgency, mean over 48
+    decimals: 2
+- id: t2-urgency-l
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/log_ratio/mean
+    reported: '0.108'
+    units: log ratio
+    conditions: urgency, mean
+    decimals: 3
+- id: t2-urgency-s
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/log_ratio/se
+    reported: '0.010'
+    units: log ratio
+    conditions: urgency, SE
+    decimals: 3
+- id: t2-urgency-e
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/late_over_early/mean
+    reported: '1.23'
+    units: ratio
+    conditions: urgency, late/early D/(MB)
+    decimals: 2
+- id: t2-urgency-m
+  kind: computation
+  passage: '| urgency | 7.87 | 7.07 | 0.108 (0.010) | 1.23 | 1.00 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/M_pulse_over_sustained/mean
+    reported: '1.00'
+    units: ratio
+    conditions: urgency, pulse/sustained M
+    decimals: 2
+- id: t2-aligned_nuisance-f
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/beta_fit/mean
+    reported: '10.05'
+    units: per unit coherence
+    conditions: aligned nuisance, mean over 48
+    decimals: 2
+- id: t2-aligned_nuisance-p
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/beta_pred/mean
+    reported: '9.15'
+    units: per unit coherence
+    conditions: aligned nuisance, mean over 48
+    decimals: 2
+- id: t2-aligned_nuisance-l
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/log_ratio/mean
+    reported: '0.097'
+    units: log ratio
+    conditions: aligned nuisance, mean
+    decimals: 3
+- id: t2-aligned_nuisance-s
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/log_ratio/se
+    reported: '0.014'
+    units: log ratio
+    conditions: aligned nuisance, SE
+    decimals: 3
+- id: t2-aligned_nuisance-e
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/late_over_early/mean
+    reported: '0.98'
+    units: ratio
+    conditions: aligned nuisance, late/early D/(MB)
+    decimals: 2
+- id: t2-aligned_nuisance-m
+  kind: computation
+  passage: '| aligned nuisance | 10.05 | 9.15 | 0.097 (0.014) | 0.98 | 1.03 |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/M_pulse_over_sustained/mean
+    reported: '1.03'
+    units: ratio
+    conditions: aligned nuisance, pulse/sustained M
+    decimals: 2
+- id: s6-10
+  kind: computation
+  passage: The instantaneous parameters predict a slope of 10 in every case, against fitted slopes of 11.48, 8.66
+    and 8.51 for the leak, instability and drift-variability models.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/_theory/instantaneous_slope
+    reported: '10'
+    units: per unit coherence
+    conditions: M B / D with instantaneous parameters
+    decimals: 0
+- id: s6-l
+  kind: computation
+  passage: The instantaneous parameters predict a slope of 10 in every case, against fitted slopes of 11.48, 8.66
+    and 8.51 for the leak, instability and drift-variability models.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/beta_fit/mean
+    reported: '11.48'
+    units: per unit coherence
+    conditions: leak
+    decimals: 2
+- id: s6-i
+  kind: computation
+  passage: The instantaneous parameters predict a slope of 10 in every case, against fitted slopes of 11.48, 8.66
+    and 8.51 for the leak, instability and drift-variability models.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/beta_fit/mean
+    reported: '8.66'
+    units: per unit coherence
+    conditions: instability
+    decimals: 2
+- id: s6-d
+  kind: computation
+  passage: The instantaneous parameters predict a slope of 10 in every case, against fitted slopes of 11.48, 8.66
+    and 8.51 for the leak, instability and drift-variability models.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/beta_fit/mean
+    reported: '8.51'
+    units: per unit coherence
+    conditions: drift variability
+    decimals: 2
+- id: s6-lr1
+  kind: computation
+  passage: Under these three models the mean log ratio stays between -0.044 and 0.051, and the prediction falls
+    within ±25% of the fitted slope in at least 98% of datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/log_ratio/mean
+    reported: '-0.044'
+    units: log ratio
+    conditions: leak
+    decimals: 3
+- id: s6-lr2
+  kind: computation
+  passage: Under these three models the mean log ratio stays between -0.044 and 0.051, and the prediction falls
+    within ±25% of the fitted slope in at least 98% of datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/log_ratio/mean
+    reported: '0.051'
+    units: log ratio
+    conditions: instability
+    decimals: 3
+- id: s6-98
+  kind: computation
+  passage: Under these three models the mean log ratio stays between -0.044 and 0.051, and the prediction falls
+    within ±25% of the fitted slope in at least 98% of datasets.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/frac_within_25pct
+    reported: 98%
+    units: percent of datasets
+    conditions: 'smallest of the three (leak and drift variability: 47 of 48)'
+    decimals: 0
+    scale: 100
+- id: s6-int
+  kind: interpretation
+  passage: Agreement between the neural prediction and behaviour is therefore evidence for bounded accumulation
+    with the measured effective ratio; it does not single out the pure integrator.
+  rationale: 'Interpretation of the scenario table: three departures give predictions close to behaviour.'
+- id: s6-u1
+  kind: computation
+  passage: Urgency [@churchland2008; @ditterich2006; @drugowitsch2012; @hanks2014; @cisek2009] makes the neural
+    slope and diffusion grow during the trial, and the prediction is 7.07 against a fitted 7.87; the ratio of $D/(MB)$
+    in a late window (0.3 to 0.6 s) to an early one (0.1 to 0.3 s) rises to 1.23 against 1.03 for the integrator,
+    which flags it; it also rises, to 1.12, under drift variability.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/beta_pred/mean
+    reported: '7.07'
+    units: per unit coherence
+    conditions: urgency
+    decimals: 2
+- id: s6-u2
+  kind: computation
+  passage: Urgency [@churchland2008; @ditterich2006; @drugowitsch2012; @hanks2014; @cisek2009] makes the neural
+    slope and diffusion grow during the trial, and the prediction is 7.07 against a fitted 7.87; the ratio of $D/(MB)$
+    in a late window (0.3 to 0.6 s) to an early one (0.1 to 0.3 s) rises to 1.23 against 1.03 for the integrator,
+    which flags it; it also rises, to 1.12, under drift variability.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/beta_fit/mean
+    reported: '7.87'
+    units: per unit coherence
+    conditions: urgency
+    decimals: 2
+- id: s6-u3
+  kind: computation
+  passage: Urgency [@churchland2008; @ditterich2006; @drugowitsch2012; @hanks2014; @cisek2009] makes the neural
+    slope and diffusion grow during the trial, and the prediction is 7.07 against a fitted 7.87; the ratio of $D/(MB)$
+    in a late window (0.3 to 0.6 s) to an early one (0.1 to 0.3 s) rises to 1.23 against 1.03 for the integrator,
+    which flags it; it also rises, to 1.12, under drift variability.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/urgency/late_over_early/mean
+    reported: '1.23'
+    units: ratio
+    conditions: urgency
+    decimals: 2
+- id: s6-u4
+  kind: computation
+  passage: Urgency [@churchland2008; @ditterich2006; @drugowitsch2012; @hanks2014; @cisek2009] makes the neural
+    slope and diffusion grow during the trial, and the prediction is 7.07 against a fitted 7.87; the ratio of $D/(MB)$
+    in a late window (0.3 to 0.6 s) to an early one (0.1 to 0.3 s) rises to 1.23 against 1.03 for the integrator,
+    which flags it; it also rises, to 1.12, under drift variability.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/late_over_early/mean
+    reported: '1.03'
+    units: ratio
+    conditions: integrator
+    decimals: 2
+- id: s6-u5
+  kind: computation
+  passage: Urgency [@churchland2008; @ditterich2006; @drugowitsch2012; @hanks2014; @cisek2009] makes the neural
+    slope and diffusion grow during the trial, and the prediction is 7.07 against a fitted 7.87; the ratio of $D/(MB)$
+    in a late window (0.3 to 0.6 s) to an early one (0.1 to 0.3 s) rises to 1.23 against 1.03 for the integrator,
+    which flags it; it also rises, to 1.12, under drift variability.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/drift variability/late_over_early/mean
+    reported: '1.12'
+    units: ratio
+    conditions: drift variability
+    decimals: 2
+- id: s6-n1
+  kind: computation
+  passage: A signal along the coding axis that does not drive the choice inflates the measured diffusion and lowers
+    the prediction to 9.15 against 10.05, and no diagnostic computed without choices separates it from a noisier
+    accumulator; it shows only as the gap itself.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/beta_pred/mean
+    reported: '9.15'
+    units: per unit coherence
+    conditions: aligned nuisance
+    decimals: 2
+- id: s6-n2
+  kind: computation
+  passage: A signal along the coding axis that does not drive the choice inflates the measured diffusion and lowers
+    the prediction to 9.15 against 10.05, and no diagnostic computed without choices separates it from a noisier
+    accumulator; it shows only as the gap itself.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/aligned nuisance/beta_fit/mean
+    reported: '10.05'
+    units: per unit coherence
+    conditions: aligned nuisance
+    decimals: 2
+- id: s6-m1
+  kind: computation
+  passage: The ratio of pulse to sustained mobility is 1.05 under the integrator, 1.12 under leak and 0.94 under
+    instability, so evidence delivered briefly is integrated differently from evidence delivered throughout when
+    the accumulator leaks or is unstable.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/integrator/M_pulse_over_sustained/mean
+    reported: '1.05'
+    units: ratio
+    conditions: integrator
+    decimals: 2
+- id: s6-m2
+  kind: computation
+  passage: The ratio of pulse to sustained mobility is 1.05 under the integrator, 1.12 under leak and 0.94 under
+    instability, so evidence delivered briefly is integrated differently from evidence delivered throughout when
+    the accumulator leaks or is unstable.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/leak/M_pulse_over_sustained/mean
+    reported: '1.12'
+    units: ratio
+    conditions: leak
+    decimals: 2
+- id: s6-m3
+  kind: computation
+  passage: The ratio of pulse to sustained mobility is 1.05 under the integrator, 1.12 under leak and 0.94 under
+    instability, so evidence delivered briefly is integrated differently from evidence delivered throughout when
+    the accumulator leaks or is unstable.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/instability/M_pulse_over_sustained/mean
+    reported: '0.94'
+    units: ratio
+    conditions: instability
+    decimals: 2
+- id: s-urg
+  kind: source
+  passage: Two departures leave larger gaps.
+  evidence:
+    citation_id: drugowitsch2012
+    locator: Abstract
+    verification_note: 'Abstract: cost of accumulating evidence increases with time; urgency signals independent
+      of stimulus strength.'
+    verified: true
+- id: s-urg2
+  kind: source
+  passage: Two departures leave larger gaps.
+  evidence:
+    citation_id: hanks2014
+    locator: Abstract
+    verification_note: 'Abstract: evidence-independent activation in LIP changes with the speed-accuracy regime.'
+    verified: true
+- id: s-urg3
+  kind: source
+  passage: Two departures leave larger gaps.
+  evidence:
+    citation_id: cisek2009
+    locator: Abstract
+    verification_note: 'Abstract: urgency gating as an alternative to temporal integration.'
+    verified: true
+- id: s-urg4
+  kind: source
+  passage: Two departures leave larger gaps.
+  evidence:
+    citation_id: ditterich2006
+    locator: Abstract
+    verification_note: 'Abstract (PubMed): time-variant diffusion models account for behavioural and neural data.'
+    verified: true
+- id: fig4-n
+  kind: computation
+  passage: (a) Slope fitted to choices against the slope predicted from the neural estimates (filled, mean ± SE
+    over 48 datasets) and against the instantaneous $MB/D = 10$ (open); the band is ±10%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /scenarios/_nrep
+    reported: '48'
+    units: datasets
+    conditions: replicates
+    decimals: 0
+- id: s-lakens
+  kind: source
+  passage: 'The comparison is an equivalence test: two one-sided tests at level 0.05 on the log ratio of fitted
+    to predicted slope, with a margin chosen in advance [@schuirmann1987; @lakens2017].'
+  evidence:
+    citation_id: lakens2017
+    locator: Abstract
+    verification_note: 'Abstract: two one-sided tests with bounds set by the smallest effect size of interest.'
+    verified: true
+- id: s-schuir
+  kind: source
+  passage: 'The comparison is an equivalence test: two one-sided tests at level 0.05 on the log ratio of fitted
+    to predicted slope, with a margin chosen in advance [@schuirmann1987; @lakens2017].'
+  evidence:
+    citation_id: schuirmann1987
+    locator: Title
+    verification_note: 'Standard result: the two one-sided tests procedure for equivalence (title).'
+    verified: true
+- id: pw-n
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/nrep
+    reported: '96'
+    units: datasets
+    conditions: replicates per size
+    decimals: 0
+- id: pw-t0
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/0/trials
+    reported: 4,000
+    units: trials
+    conditions: total trials
+    decimals: 0
+- id: pw-s0
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/0/sd_log_ratio
+    reported: '0.106'
+    units: log ratio
+    conditions: SD across 96 datasets
+    decimals: 3
+- id: pw-t1
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/trials
+    reported: 8,000
+    units: trials
+    conditions: total trials
+    decimals: 0
+- id: pw-s1
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/sd_log_ratio
+    reported: '0.067'
+    units: log ratio
+    conditions: SD across 96 datasets
+    decimals: 3
+- id: pw-t2
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/2/trials
+    reported: 16,000
+    units: trials
+    conditions: total trials
+    decimals: 0
+- id: pw-s2
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/2/sd_log_ratio
+    reported: '0.069'
+    units: log ratio
+    conditions: SD across 96 datasets
+    decimals: 3
+- id: pw-t3
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/3/trials
+    reported: 32,000
+    units: trials
+    conditions: total trials
+    decimals: 0
+- id: pw-s3
+  kind: computation
+  passage: Over 96 simulated datasets at each of 4,000, 8,000, 16,000 and 32,000 trials, with every trial set scaled
+    in proportion, the SD of the log ratio was 0.106, 0.067, 0.069 and 0.041 (Figure 5).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/3/sd_log_ratio
+    reported: '0.041'
+    units: log ratio
+    conditions: SD across 96 datasets
+    decimals: 3
+- id: pw-k
+  kind: computation
+  passage: One curve $\kappa/\sqrt{n}$, with $n$ the number of trials and $\kappa$ = 7.12, describes the four values,
+    which scatter around it by up to 23%, and we use the curve for the design statements.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/kappa
+    reported: '7.12'
+    units: log ratio x sqrt(trials)
+    conditions: geometric-mean fit with slope -1/2
+    decimals: 2
+- id: pw-sc
+  kind: interpretation
+  passage: One curve $\kappa/\sqrt{n}$, with $n$ the number of trials and $\kappa$ = 7.12, describes the four values,
+    which scatter around it by up to 23%, and we use the curve for the design statements.
+  rationale: 'Largest relative deviation of the four SDs from kappa/sqrt(trials): 16,000 trials, 0.0693 against
+    0.0563 (+23%).'
+- id: pw-sd
+  kind: computation
+  passage: It gives an SD of 0.080 at 8,000 trials.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/sd_pooled
+    reported: '0.080'
+    units: log ratio
+    conditions: pooled
+    decimals: 3
+- id: pw-25
+  kind: computation
+  passage: Two one-sided tests with a margin of ±25% then reach a power of 0.8 at about 8,700 trials, and a margin
+    of ±10% needs about 48,000 trials.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/trials_for_power80_25
+    reported: 8,700
+    units: trials
+    conditions: margin 25%
+    significant_digits: 2
+- id: pw-10
+  kind: computation
+  passage: Two one-sided tests with a margin of ±25% then reach a power of 0.8 at about 8,700 trials, and a margin
+    of ±10% needs about 48,000 trials.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/trials_for_power80_10
+    reported: 48,000
+    units: trials
+    conditions: margin 10%
+    significant_digits: 2
+- id: pw-f
+  kind: computation
+  passage: 'Most of the uncertainty is on the neural side: at 8,000 trials the SD of the log fitted slope is 0.037
+    and that of the log predicted slope 0.066.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/sd_log_beta_fit
+    reported: '0.037'
+    units: log slope
+    conditions: 8,000 trials
+    decimals: 3
+- id: pw-p
+  kind: computation
+  passage: 'Most of the uncertainty is on the neural side: at 8,000 trials the SD of the log fitted slope is 0.037
+    and that of the log predicted slope 0.066.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/rows/1/sd_log_beta_pred
+    reported: '0.066'
+    units: log slope
+    conditions: 8,000 trials
+    decimals: 3
+- id: fig5-n
+  kind: computation
+  passage: (a) SD across 96 simulated datasets of the log fitted slope, the log predicted slope and their difference,
+    against the number of trials, with the pooled curve $\kappa/\sqrt{n}$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /power/nrep
+    reported: '96'
+    units: datasets
+    conditions: replicates
+    decimals: 0
+- id: s-st-1
+  kind: source
+  passage: Two monkeys made reaction-time decisions about random-dot motion while up to 203 LIP neurons were recorded
+    simultaneously, in eight sessions with 9,684 trials for one monkey and 8,142 for the other; on half of the trials
+    a 100 ms pulse of weak motion appeared at a random time and biased choices and reaction times by the equivalent
+    of 1.4% coherence.
+  evidence:
+    citation_id: steinemann2024
+    locator: Results, Figure 1 and Figure 1-figure supplement 1
+    verification_note: 'Full text (PMC11488853): up to 203 neurons; eight sessions from two monkeys; 9684 trials
+      (monkey M) and 8142 (monkey J); on 50% of trials a 100 ms pulse of weak motion at a random time, biasing choice
+      and RT equivalent to +-1.4% coh.'
+    verified: true
+- id: s-st-2
+  kind: source
+  passage: The authors fitted a race between two negatively correlated accumulators (correlation -0.71) with a linear
+    urgency signal.
+  evidence:
+    citation_id: steinemann2024
+    locator: Figure 1c and Table 2
+    verification_note: 'Full text: race between two accumulators with negatively correlated evidence (rho = -0.71);
+      Table 2 lists a linear urgency component.'
+    verified: true
+- id: s-st-3
+  kind: source
+  passage: The data of Steinemann and colleagues fit the test closely [@steinemann2024; @steinemann2024data].
+  evidence:
+    citation_id: steinemann2024data
+    locator: Data availability
+    verification_note: 'Data availability statement of the article: data deposited at Zenodo (10.5281/zenodo.13207505).'
+    verified: true
+- id: s-zyl
+  kind: source
+  passage: A manipulation of stimulus noise at fixed mean motion [@zylberberg2016] raises $D$ without changing $M$
+    and, if the bound stays fixed, should lower the slope in proportion, which tests the dependence on diffusion
+    directly.
+  evidence:
+    citation_id: zylberberg2016
+    locator: Abstract
+    verification_note: 'Abstract: a sensory manipulation that adds unbiased noise to motion-selective regions; faster
+      decisions and reduced accuracy as a bounded accumulation model predicts.'
+    verified: true
+- id: s-wich
+  kind: source
+  passage: The slope $MB/D$ with a bootstrap interval over trials [@efron1993], compared with the slope fitted to
+    held-out choices with a lapse rate [@wichmann2001] by two one-sided tests with a margin of ±25%, together with
+    the late/early and pulse/sustained diagnostics.
+  evidence:
+    citation_id: wichmann2001
+    locator: Abstract
+    verification_note: 'Abstract (PubMed): fitting psychometric functions with stimulus-independent errors (lapses).'
+    verified: true
+- id: plan
+  kind: interpretation
+  passage: The outcomes have distinct readings.
+  rationale: Readings derived from the scenario table (section 6) and Proposition 3.
+- id: s-aguilera
+  kind: source
+  passage: The propositions concern a one-dimensional decision variable; races of partially correlated accumulators
+    and multidimensional representations need the exit probability of the fitted model, and the invariance of Proposition
+    2 holds only for linear readouts.
+  evidence:
+    citation_id: aguilera2022
+    locator: Abstract
+    verification_note: 'Abstract: the assumptions of the free-energy principle hold only in a narrow parameter space
+      of linear stochastic systems.'
+    verified: true
+- id: s-isomura
+  kind: source
+  passage: The propositions concern a one-dimensional decision variable; races of partially correlated accumulators
+    and multidimensional representations need the exit probability of the fitted model, and the invariance of Proposition
+    2 holds only for linear readouts.
+  evidence:
+    citation_id: isomura2023
+    locator: Abstract
+    verification_note: 'Abstract: quantitative predictions of the free-energy principle confirmed in vitro.'
+    verified: true
+- id: s-ibl
+  kind: source
+  passage: The propositions concern a one-dimensional decision variable; races of partially correlated accumulators
+    and multidimensional representations need the exit probability of the fitted model, and the invariance of Proposition
+    2 holds only for linear readouts.
+  evidence:
+    citation_id: ibl2021
+    locator: Abstract
+    verification_note: 'Abstract: a standardized mouse decision-making task reproduced across laboratories, with
+      a public database.'
+    verified: true
+runs:
+- id: model
+  record: verification/model.json
+  required: true
